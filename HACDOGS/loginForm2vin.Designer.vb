@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class loginForm2vin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,186 +20,181 @@ Partial Class loginForm2vin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtPass1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtUser1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loginForm2vin))
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.txtPassRepeat = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtPass2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtUser2 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnRegister = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.txtUser1 = New System.Windows.Forms.TextBox()
+        Me.txtPass1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.showregButton = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.minimizeButton = New System.Windows.Forms.PictureBox()
+        Me.closeButton = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.minimizeButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.closeButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtPass1)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtUser1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.btnLogin)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(198, 155)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Login"
-        '
-        'txtPass1
-        '
-        Me.txtPass1.Location = New System.Drawing.Point(76, 69)
-        Me.txtPass1.Name = "txtPass1"
-        Me.txtPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass1.Size = New System.Drawing.Size(100, 20)
-        Me.txtPass1.TabIndex = 4
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Password"
-        '
-        'txtUser1
-        '
-        Me.txtUser1.Location = New System.Drawing.Point(76, 43)
-        Me.txtUser1.Name = "txtUser1"
-        Me.txtUser1.Size = New System.Drawing.Size(100, 20)
-        Me.txtUser1.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(20, 46)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Instructor"
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(63, 113)
+        Me.btnLogin.BackColor = System.Drawing.Color.DarkMagenta
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(267, 271)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogin.Size = New System.Drawing.Size(96, 47)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'txtPassRepeat
+        'txtUser1
         '
-        Me.txtPassRepeat.Location = New System.Drawing.Point(103, 73)
-        Me.txtPassRepeat.Name = "txtPassRepeat"
-        Me.txtPassRepeat.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassRepeat.Size = New System.Drawing.Size(100, 20)
-        Me.txtPassRepeat.TabIndex = 11
+        Me.txtUser1.Location = New System.Drawing.Point(333, 206)
+        Me.txtUser1.Name = "txtUser1"
+        Me.txtUser1.Size = New System.Drawing.Size(122, 20)
+        Me.txtUser1.TabIndex = 2
         '
-        'Label5
+        'txtPass1
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 76)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 13)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Repeat Password"
+        Me.txtPass1.Location = New System.Drawing.Point(333, 235)
+        Me.txtPass1.Name = "txtPass1"
+        Me.txtPass1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPass1.Size = New System.Drawing.Size(122, 20)
+        Me.txtPass1.TabIndex = 4
         '
-        'txtPass2
+        'PictureBox1
         '
-        Me.txtPass2.Location = New System.Drawing.Point(103, 47)
-        Me.txtPass2.Name = "txtPass2"
-        Me.txtPass2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass2.Size = New System.Drawing.Size(100, 20)
-        Me.txtPass2.TabIndex = 9
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.Location = New System.Drawing.Point(238, 46)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(269, 294)
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
         '
-        'Label3
+        'showregButton
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(44, 50)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Password"
+        Me.showregButton.BackColor = System.Drawing.Color.Plum
+        Me.showregButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.showregButton.ForeColor = System.Drawing.Color.Black
+        Me.showregButton.Location = New System.Drawing.Point(373, 271)
+        Me.showregButton.Name = "showregButton"
+        Me.showregButton.Size = New System.Drawing.Size(96, 47)
+        Me.showregButton.TabIndex = 17
+        Me.showregButton.Text = "Create an Account"
+        Me.showregButton.UseVisualStyleBackColor = False
         '
-        'txtUser2
+        'Label6
         '
-        Me.txtUser2.Location = New System.Drawing.Point(103, 21)
-        Me.txtUser2.Name = "txtUser2"
-        Me.txtUser2.Size = New System.Drawing.Size(100, 20)
-        Me.txtUser2.TabIndex = 7
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Impact", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(49, 367)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(622, 23)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "Helpful Anti-Cheating Concept in Developing Official and Graded Exams System"
         '
-        'Label4
+        'PictureBox2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(47, 24)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 13)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Instructor"
+        Me.PictureBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(294, 229)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(34, 31)
+        Me.PictureBox2.TabIndex = 19
+        Me.PictureBox2.TabStop = False
         '
-        'btnRegister
+        'PictureBox3
         '
-        Me.btnRegister.Location = New System.Drawing.Point(82, 113)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(75, 23)
-        Me.btnRegister.TabIndex = 12
-        Me.btnRegister.Text = "Register"
-        Me.btnRegister.UseVisualStyleBackColor = True
+        Me.PictureBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(294, 197)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(34, 31)
+        Me.PictureBox3.TabIndex = 20
+        Me.PictureBox3.TabStop = False
         '
-        'GroupBox2
+        'PictureBox4
         '
-        Me.GroupBox2.Controls.Add(Me.txtPassRepeat)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtPass2)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.txtUser2)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.btnRegister)
-        Me.GroupBox2.Location = New System.Drawing.Point(228, 12)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(229, 155)
-        Me.GroupBox2.TabIndex = 15
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Register"
+        Me.PictureBox4.BackColor = System.Drawing.Color.White
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(308, 62)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(132, 118)
+        Me.PictureBox4.TabIndex = 21
+        Me.PictureBox4.TabStop = False
+        '
+        'minimizeButton
+        '
+        Me.minimizeButton.BackColor = System.Drawing.Color.DarkGray
+        Me.minimizeButton.Location = New System.Drawing.Point(52, 29)
+        Me.minimizeButton.Name = "minimizeButton"
+        Me.minimizeButton.Size = New System.Drawing.Size(42, 50)
+        Me.minimizeButton.TabIndex = 38
+        Me.minimizeButton.TabStop = False
+        '
+        'closeButton
+        '
+        Me.closeButton.BackColor = System.Drawing.Color.Red
+        Me.closeButton.Location = New System.Drawing.Point(100, 29)
+        Me.closeButton.Name = "closeButton"
+        Me.closeButton.Size = New System.Drawing.Size(42, 50)
+        Me.closeButton.TabIndex = 37
+        Me.closeButton.TabStop = False
         '
         'loginForm2vin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 174)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(756, 399)
+        Me.Controls.Add(Me.minimizeButton)
+        Me.Controls.Add(Me.closeButton)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.showregButton)
+        Me.Controls.Add(Me.txtPass1)
+        Me.Controls.Add(Me.txtUser1)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "loginForm2vin"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "loginForm2vin"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.minimizeButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.closeButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtPass1 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtUser1 As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnLogin As Button
-    Friend WithEvents txtPassRepeat As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txtPass2 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtUser2 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents btnRegister As Button
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents txtUser1 As TextBox
+    Friend WithEvents txtPass1 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents showregButton As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents minimizeButton As PictureBox
+    Friend WithEvents closeButton As PictureBox
 End Class
