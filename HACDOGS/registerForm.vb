@@ -7,7 +7,7 @@ Public Class registerForm
     Dim locationdb As String = Environment.CurrentDirectory
     Dim fileName As String = "db_main.db3"
     Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
-    Public connectString As String = String.Format("Data Source = {0}", fullPath)
+    Public connectString As String = String.Format("Data Source = {0}", fileName)
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 

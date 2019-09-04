@@ -6,11 +6,13 @@ Public Class loginForm2vin
     Dim locationdb As String = Environment.CurrentDirectory
     Dim fileName As String = "db_main.db3"
     Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
-    Public connectString As String = String.Format("Data Source = {0}", fullPath)
+    Public connectString As String = String.Format("Data Source = {0}", fileName)
 
 
     Public Sub createDatabase()
         If Not duplicateDatabase(fullPath) Then
+            System.Data.SQLite.SQLiteConnection.CreateFile("db_main.db3")
+
             Dim createTable As String = "CREATE TABLE `tbl_accounts` (
 	                                            `id`	INTEGER NOT NULL,
 	                                            `username`	TEXT,
@@ -42,7 +44,7 @@ Public Class loginForm2vin
                 txtUser1.ResetText()
                 txtPass1.ResetText()
                 loggingIn = True
-                user_id = dr.GetInt16("user_id")
+                user_id = dr.GetInt16(0)
                 Exit While
             End While
             dr.Close()
