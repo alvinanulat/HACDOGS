@@ -28,10 +28,8 @@ Partial Class registerForm
         Me.closeButton = New System.Windows.Forms.PictureBox()
         Me.minimizeButton = New System.Windows.Forms.PictureBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtUser1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtPass1 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.showregButton = New System.Windows.Forms.Button()
@@ -46,7 +44,6 @@ Partial Class registerForm
         Me.btnLoginInstead = New System.Windows.Forms.Button()
         Me.txtPass2 = New System.Windows.Forms.TextBox()
         Me.btnRegister = New System.Windows.Forms.Button()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.txtUser2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPassRepeat = New System.Windows.Forms.TextBox()
@@ -58,15 +55,16 @@ Partial Class registerForm
         Me.BunifuElipse9 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BunifuElipse10 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.closeButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minimizeButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLogin.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.pnlRegister.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label6
@@ -102,7 +100,6 @@ Partial Class registerForm
         'pnlLogin
         '
         Me.pnlLogin.BackColor = System.Drawing.Color.White
-        Me.pnlLogin.Controls.Add(Me.PictureBox1)
         Me.pnlLogin.Controls.Add(Me.btnLogin)
         Me.pnlLogin.Controls.Add(Me.txtUser1)
         Me.pnlLogin.Controls.Add(Me.PictureBox3)
@@ -113,17 +110,6 @@ Partial Class registerForm
         Me.pnlLogin.Name = "pnlLogin"
         Me.pnlLogin.Size = New System.Drawing.Size(269, 312)
         Me.pnlLogin.TabIndex = 40
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.White
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(68, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(132, 118)
-        Me.PictureBox1.TabIndex = 21
-        Me.PictureBox1.TabStop = False
         '
         'btnLogin
         '
@@ -145,17 +131,6 @@ Partial Class registerForm
         Me.txtUser1.Name = "txtUser1"
         Me.txtUser1.Size = New System.Drawing.Size(122, 20)
         Me.txtUser1.TabIndex = 2
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(52, 142)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(34, 31)
-        Me.PictureBox3.TabIndex = 20
-        Me.PictureBox3.TabStop = False
         '
         'txtPass1
         '
@@ -245,7 +220,6 @@ Partial Class registerForm
         Me.pnlRegister.Controls.Add(Me.btnLoginInstead)
         Me.pnlRegister.Controls.Add(Me.txtPass2)
         Me.pnlRegister.Controls.Add(Me.btnRegister)
-        Me.pnlRegister.Controls.Add(Me.PictureBox4)
         Me.pnlRegister.Controls.Add(Me.txtUser2)
         Me.pnlRegister.Controls.Add(Me.Label4)
         Me.pnlRegister.Controls.Add(Me.txtPassRepeat)
@@ -292,17 +266,6 @@ Partial Class registerForm
         Me.btnRegister.TabIndex = 30
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.White
-        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(79, 26)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(111, 97)
-        Me.PictureBox4.TabIndex = 34
-        Me.PictureBox4.TabStop = False
         '
         'txtUser2
         '
@@ -386,6 +349,28 @@ Partial Class registerForm
         Me.BunifuElipse10.ElipseRadius = 10
         Me.BunifuElipse10.TargetControl = Me.Panel2
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.White
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(323, 61)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(111, 97)
+        Me.PictureBox4.TabIndex = 34
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(52, 142)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(34, 31)
+        Me.PictureBox3.TabIndex = 20
+        Me.PictureBox3.TabStop = False
+        '
         'registerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -393,8 +378,9 @@ Partial Class registerForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(756, 399)
-        Me.Controls.Add(Me.pnlRegister)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.pnlLogin)
+        Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
@@ -407,14 +393,13 @@ Partial Class registerForm
         CType(Me.minimizeButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.pnlRegister.ResumeLayout(False)
         Me.pnlRegister.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -423,10 +408,8 @@ Partial Class registerForm
     Friend WithEvents closeButton As PictureBox
     Friend WithEvents minimizeButton As PictureBox
     Friend WithEvents pnlLogin As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtUser1 As TextBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents txtPass1 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents showregButton As Button
@@ -443,7 +426,6 @@ Partial Class registerForm
     Friend WithEvents btnLoginInstead As Button
     Friend WithEvents txtPass2 As TextBox
     Friend WithEvents btnRegister As Button
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents txtUser2 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtPassRepeat As TextBox
@@ -453,4 +435,6 @@ Partial Class registerForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents BunifuElipse10 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
 End Class
