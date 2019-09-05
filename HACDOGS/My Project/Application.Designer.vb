@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.HACDOGS.loginForm2vin
+            Me.MainForm = Global.HACDOGS.registerForm
         End Sub
     End Class
 End Namespace
