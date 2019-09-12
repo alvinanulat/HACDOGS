@@ -106,6 +106,8 @@ Public Class registerForm
                 txtPass1.ResetText()
                 loggingIn = True
                 user_id = dr.GetInt16(0)
+                mainForm.Show()
+                Me.Close()
                 Exit While
             End While
             dr.Close()
@@ -169,4 +171,7 @@ Public Class registerForm
         txtPass2.ResetText()
         txtPassRepeat.ResetText()
     End Sub
+    Dim a As Integer = 0
+
+
 End Class

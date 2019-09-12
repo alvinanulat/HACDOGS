@@ -9,12 +9,10 @@ D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\HACDOGS.exe
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\HACDOGS.pdb
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\HACDOGS.xml
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\EntityFramework.dll
-D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\EntityFramework.SqlServer.dll
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.dll
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.EF6.dll
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.Linq.dll
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\EntityFramework.xml
-D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.xml
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\obj\Debug\HACDOGS.exe
 D:\Documents\Visual Studio 2015\Projects\HACDOGS\HACDOGS\obj\Debug\HACDOGS.pdb

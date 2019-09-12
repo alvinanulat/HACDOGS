@@ -1,41 +1,61 @@
 ﻿Imports System.Data.SQLite
 Public Class mainForm
-    'Dim locationdb As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-    Dim cmdstring As String
+    Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    Dim locationdb As String = Environment.CurrentDirectory
-    Dim fileName As String = "db_main.db3"
-    Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
-    Public connectString As String = String.Format("Data Source = {0}", fullPath)
+    End Sub
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
+        drag = True
+        'Me.WindowState = FormWindowState.Normal
+        mousex = Cursor.Position.X - Me.Left
+        mousey = Cursor.Position.Y - Me.Top
+    End Sub
 
-    Public Sub createDatabase()
-        If Not duplicateDatabase(fullPath) Then
-            Dim createTable As String = "CREATE TABLE `tbl_sets` (
-	                                     `id`	INTEGER NOT NULL,
-	                                    `sets`	INTEGER,
-                                    	PRIMARY KEY(`id`)
-                                        );"
-            Using SqlConn As New SQLiteConnection(connectString)
-                Dim cmd As New SQLiteCommand(createTable, SqlConn)
-                SqlConn.Open()
-                cmd.ExecuteNonQuery()
-            End Using
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        If drag Then
+
+            Me.Top = Cursor.Position.Y - mousey
+            Me.Left = Cursor.Position.X - mousex
+            Me.WindowState = FormWindowState.Normal
+            a = 0
         End If
     End Sub
-    Private Function duplicateDatabase(fullPath As String) As Boolean
-        Return System.IO.File.Exists(fullPath)
-    End Function
 
-    Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        createDatabase()
+    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+        drag = False
     End Sub
 
-    Private Sub testButton_Click(sender As Object, e As EventArgs) Handles testButton.Click
-        Using sqlconn As New SQLiteConnection(connectString)
-            cmdstring = "Insert into  tbl_sets  (sets) values ('" & TextBox1.Text & "');"
-            Dim cmd As New SQLiteCommand(cmdstring, sqlconn)
-            sqlconn.Open()
-            cmd.ExecuteNonQuery()
-        End Using
+    Dim a As Integer = 0
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+        If a = 0 Then
+            Me.WindowState = FormWindowState.Maximized
+            a = 1
+        Else
+            Me.WindowState = FormWindowState.Normal
+            a = 0
+        End If
+    End Sub
+
+    Private Sub Panel1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDoubleClick
+        If a = 0 Then
+            Me.WindowState = FormWindowState.Maximized
+            a = 1
+        Else
+            Me.WindowState = FormWindowState.Normal
+            a = 0
+        End If
+    End Sub
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles closeButton.Click
+        Dim ExitYN As System.Windows.Forms.DialogResult
+        ExitYN = MsgBox("Do you really want to exit?", MsgBoxStyle.YesNo)
+        If ExitYN = MsgBoxResult.Yes Then
+            MyBase.Close()
+        Else
+        End If
+    End Sub
+    Private Sub minimize_Click(sender As Object, e As EventArgs) Handles minimizeButton.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 End Class
