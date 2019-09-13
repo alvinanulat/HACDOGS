@@ -63,7 +63,7 @@ Public Class registerForm
         cbUser.DataSource = table
         cbUser.DisplayMember = "username"
         cbUser.ValueMember = "id"
-
+        cbUser.ResetText()
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -119,7 +119,7 @@ Public Class registerForm
             While (dr.Read())
                 MessageBox.Show("Logging in...")
                 username = cbUser.Text
-                'txtUser1.ResetText()
+                cbUser.ResetText()
                 txtPass1.ResetText()
                 loggingIn = True
                 user_id = dr.GetInt16(0)
@@ -160,7 +160,7 @@ Public Class registerForm
     Private Sub showregButton_Click(sender As Object, e As EventArgs) Handles showregButton.Click
         pnlRegister.Visible = True
         pnlLogin.Visible = False
-        'txtUser1.ResetText()
+        cbUser.ResetText()
         txtPass1.ResetText()
     End Sub
 
