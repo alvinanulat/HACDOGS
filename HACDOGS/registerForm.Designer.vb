@@ -29,7 +29,6 @@ Partial Class registerForm
         Me.minimizeButton = New System.Windows.Forms.PictureBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.txtUser1 = New System.Windows.Forms.TextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtPass1 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -57,6 +56,8 @@ Partial Class registerForm
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BunifuElipse10 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.cbUser = New System.Windows.Forms.ComboBox()
+        Me.BunifuElipse11 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         CType(Me.closeButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minimizeButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLogin.SuspendLayout()
@@ -100,8 +101,8 @@ Partial Class registerForm
         'pnlLogin
         '
         Me.pnlLogin.BackColor = System.Drawing.Color.White
+        Me.pnlLogin.Controls.Add(Me.cbUser)
         Me.pnlLogin.Controls.Add(Me.btnLogin)
-        Me.pnlLogin.Controls.Add(Me.txtUser1)
         Me.pnlLogin.Controls.Add(Me.PictureBox3)
         Me.pnlLogin.Controls.Add(Me.txtPass1)
         Me.pnlLogin.Controls.Add(Me.PictureBox2)
@@ -124,13 +125,6 @@ Partial Class registerForm
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
-        '
-        'txtUser1
-        '
-        Me.txtUser1.Location = New System.Drawing.Point(91, 151)
-        Me.txtUser1.Name = "txtUser1"
-        Me.txtUser1.Size = New System.Drawing.Size(122, 20)
-        Me.txtUser1.TabIndex = 2
         '
         'PictureBox3
         '
@@ -371,6 +365,19 @@ Partial Class registerForm
         Me.PictureBox4.TabIndex = 34
         Me.PictureBox4.TabStop = False
         '
+        'cbUser
+        '
+        Me.cbUser.FormattingEnabled = True
+        Me.cbUser.Location = New System.Drawing.Point(92, 148)
+        Me.cbUser.Name = "cbUser"
+        Me.cbUser.Size = New System.Drawing.Size(121, 21)
+        Me.cbUser.TabIndex = 21
+        '
+        'BunifuElipse11
+        '
+        Me.BunifuElipse11.ElipseRadius = 10
+        Me.BunifuElipse11.TargetControl = Me.Panel2
+        '
         'registerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -409,7 +416,6 @@ Partial Class registerForm
     Friend WithEvents minimizeButton As PictureBox
     Friend WithEvents pnlLogin As Panel
     Friend WithEvents btnLogin As Button
-    Friend WithEvents txtUser1 As TextBox
     Friend WithEvents txtPass1 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents showregButton As Button
@@ -437,4 +443,6 @@ Partial Class registerForm
     Friend WithEvents BunifuElipse10 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents cbUser As ComboBox
+    Friend WithEvents BunifuElipse11 As Bunifu.Framework.UI.BunifuElipse
 End Class

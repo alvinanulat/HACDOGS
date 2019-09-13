@@ -18,14 +18,15 @@ Public Class registerForm
     Dim con As SQLiteConnection
     Dim cmdstring As String
     Dim dr As SQLiteDataReader
-    Dim locationdb As String = Environment.CurrentDirectory
+    Dim da As SQLiteDataAdapter
+    Dim locationdb As String = Environment.CurrentDirectory & "\db\"
     Dim fileName As String = "db_main.db3"
     Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
-    Public connectString As String = String.Format("Data Source = {0}", fileName)
+    Public connectString As String = String.Format("Data Source = {0};password=anulatbuen;", fullPath)
 
     Public Sub createDatabase()
         If Not duplicateDatabase(fullPath) Then
-            System.Data.SQLite.SQLiteConnection.CreateFile("db_main.db3")
+            '  System.Data.SQLite.SQLiteConnection.CreateFile("db_main.db3")
             Dim createTable As String = "CREATE TABLE `tbl_accounts` (
 	                                            `id`	INTEGER NOT NULL,
 	                                            `username`	TEXT,
@@ -34,6 +35,7 @@ Public Class registerForm
                                                   );"
             Using con As New SQLiteConnection(connectString)
                 Dim cmd As New SQLiteCommand(createTable, con)
+                con.SetPassword("anulatbuen")
                 con.Open()
                 cmd.ExecuteNonQuery()
             End Using
@@ -45,12 +47,23 @@ Public Class registerForm
 
     Private Sub registerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         createDatabase()
+
         con = New SQLiteConnection(connectString)
         Try
+
             con.Open()
         Catch ex As Exception
-
         End Try
+        cmdstring = "select * from  tbl_accounts ORDER BY username ASC;"
+        Dim cmd As New SQLiteCommand(cmdstring, con)
+        '   dr = cmd.ExecuteReader()
+        da = New SQLiteDataAdapter(cmd)
+        Dim table As New DataTable()
+        da.Fill(table)
+        cbUser.DataSource = table
+        cbUser.DisplayMember = "username"
+        cbUser.ValueMember = "id"
+
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -75,6 +88,10 @@ Public Class registerForm
                     cmd.ExecuteNonQuery()
                     MessageBox.Show("User registered successfully!")
 
+                    txtUser2.Text = ""
+                    txtPass2.Text = ""
+                    txtPassRepeat.Text = ""
+                    Me.registerForm_Load(Me, New System.EventArgs)
                     pnlRegister.Visible = False
                     pnlLogin.Visible = True
                 End If
@@ -92,17 +109,17 @@ Public Class registerForm
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If txtUser1.Text <> "" And txtPass1.Text <> "" Then
+        If cbUser.Text <> "" And txtPass1.Text <> "" Then
             Dim loggingIn As Boolean = False
             Dim username As String = ""
             Dim user_id As String = 0
-            cmdstring = "select * from  tbl_accounts where username='" & txtUser1.Text & "' and password='" & txtPass1.Text & "';"
+            cmdstring = "select * from  tbl_accounts where username='" & cbUser.Text & "' and password='" & txtPass1.Text & "';"
             Dim cmd As New SQLiteCommand(cmdstring, con)
             dr = cmd.ExecuteReader()
             While (dr.Read())
                 MessageBox.Show("Logging in...")
-                username = txtUser1.Text
-                txtUser1.ResetText()
+                username = cbUser.Text
+                'txtUser1.ResetText()
                 txtPass1.ResetText()
                 loggingIn = True
                 user_id = dr.GetInt16(0)
@@ -143,7 +160,7 @@ Public Class registerForm
     Private Sub showregButton_Click(sender As Object, e As EventArgs) Handles showregButton.Click
         pnlRegister.Visible = True
         pnlLogin.Visible = False
-        txtUser1.ResetText()
+        'txtUser1.ResetText()
         txtPass1.ResetText()
     End Sub
 

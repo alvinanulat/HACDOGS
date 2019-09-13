@@ -1,8 +1,7 @@
 ﻿Imports System.Data.SQLite
 Public Class mainForm
-    Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim locphotos As String = Environment.CurrentDirectory & "\data\photos\"
 
-    End Sub
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
@@ -57,5 +56,13 @@ Public Class mainForm
     End Sub
     Private Sub minimize_Click(sender As Object, e As EventArgs) Handles minimizeButton.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+    End Sub
+
+    Dim locationdb As String = Environment.CurrentDirectory & "\dbs\"
+    Dim fileName As String = "db_main.db3"
+    Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
+    Public connectString As String = String.Format("Data Source = {0}", fullPath)
+    Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
