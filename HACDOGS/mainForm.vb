@@ -22,6 +22,7 @@ Public Class mainForm
     Public username As String
 
     Private subjectId As String
+    Private examId As String
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
         drag = True
         'Me.WindowState = FormWindowState.Normal
@@ -153,8 +154,9 @@ Public Class mainForm
             i += 1
             lvi.Tag = dr.GetInt16(0)
             lvi.SubItems.Add(dr.GetString(1))
-            lvi.SubItems.Add(dr.GetString(3))
+            lvi.SubItems.Add(dr.GetInt16(3))
             lvi.SubItems.Add(dr.GetString(4))
+            lvi.SubItems.Add(dr.GetString(5))
             ListView1.Items.Add(lvi)
         End While
         dr.Close()
@@ -239,6 +241,8 @@ Public Class mainForm
                 cmd = New SQLiteCommand(cmdString, con)
                 cmd.ExecuteNonQuery()
                 refreshExams()
+                ListView2.Items.Clear()
+                lblExamName.Text = "Examination"
             End If
         Catch ex As Exception
 
@@ -257,6 +261,10 @@ Public Class mainForm
     End Sub
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+        lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
+        examId = ListView1.SelectedItems(0).Tag
 
     End Sub
+
+
 End Class
