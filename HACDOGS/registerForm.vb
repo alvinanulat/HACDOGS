@@ -64,6 +64,7 @@ Public Class registerForm
         cbUser.DisplayMember = "username"
         cbUser.ValueMember = "account_id"
         cbUser.ResetText()
+        cbUser.Select()
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -112,7 +113,7 @@ Public Class registerForm
         If cbUser.Text <> "" And txtPass1.Text <> "" Then
             Dim loggingIn As Boolean = False
             Dim username As String = ""
-            Dim user_id As String = 0
+            Dim user_id As Integer = 0
             cmdstring = "select * from  tbl_accounts where username='" & cbUser.Text & "' and password='" & txtPass1.Text & "';"
             Dim cmd As New SQLiteCommand(cmdstring, con)
             dr = cmd.ExecuteReader()
@@ -122,7 +123,9 @@ Public Class registerForm
                 cbUser.ResetText()
                 txtPass1.ResetText()
                 loggingIn = True
-                user_id = dr.GetInt16(0)
+                user_id = Integer.Parse(dr.GetInt16(0))
+                mainForm.userId = user_id
+                mainForm.username = username
                 mainForm.Show()
                 Me.Close()
                 Exit While
@@ -190,7 +193,13 @@ Public Class registerForm
         txtPass2.ResetText()
         txtPassRepeat.ResetText()
     End Sub
-    Dim a As Integer = 0
+
+    Private Sub txtPass1_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPass1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnLogin.PerformClick()
+        End If
+    End Sub
+    'Dim a As Integer = 0
 
 
 End Class

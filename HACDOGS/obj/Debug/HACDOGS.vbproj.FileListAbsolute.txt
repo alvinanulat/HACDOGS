@@ -67,3 +67,7 @@ C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinF
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml

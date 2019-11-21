@@ -378,8 +378,8 @@ Partial Class registerForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(756, 399)
         Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlLogin)
+        Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
