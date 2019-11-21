@@ -164,6 +164,34 @@ Public Class mainForm
 
     End Sub
 
+    Private Sub refreshQuestions()
+        Try
+            Dim i As Integer = 1
+            Dim lvi As ListViewItem
+            Dim dr As SQLiteDataReader
+            Dim cmdString As String = "select * from tbl_questions where exam_id='" & examId & "';"
+            cmd = New SQLiteCommand(cmdString, con)
+            dr = cmd.ExecuteReader()
+
+            ListView2.Items.Clear()
+            While dr.Read()
+                lvi = New ListViewItem
+                lvi.Text = i
+                i += 1
+                lvi.Tag = dr.GetInt16(0)
+                lvi.SubItems.Add(dr.GetString(2))
+                lvi.SubItems.Add(dr.GetString(4))
+                lvi.SubItems.Add(dr.GetString(5))
+
+                ListView2.Items.Add(lvi)
+            End While
+            dr.Close()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Function subjectButtonsHandler(ByVal subject As String, ByVal subjectName As String) As String
         lblSubjectName.Text = subjectName
         subjectId = subject
@@ -263,7 +291,7 @@ Public Class mainForm
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
         lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
         examId = ListView1.SelectedItems(0).Tag
-
+        refreshQuestions()
     End Sub
 
 
