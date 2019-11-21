@@ -105,3 +105,4 @@ C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\System.Data.SQ
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.exe.manifest
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.application
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.pdb
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.AddExaminationForm.resources

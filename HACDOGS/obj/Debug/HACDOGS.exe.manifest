@@ -175,14 +175,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="834560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="844288">
       <assemblyIdentity name="HACDOGS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GHa6ZlLP9/88K5IM+HEkcu5q2kK5bhMkL0Pz68iBE3w=</dsig:DigestValue>
+        <dsig:DigestValue>+VQ91GQLFoDuAtudbjxd467d7W+rMhuiDTFXARbhG6c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

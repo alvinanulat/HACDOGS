@@ -82,9 +82,7 @@ Public Class mainForm
         lblLoggedIn.Text = "Logged in: " & username
     End Sub
 
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
 
-    End Sub
 
     Private Sub mainForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         'BunifuVScrollBar1.ThumbLength = FlowLayoutPanel1.VerticalScroll.
@@ -230,7 +228,7 @@ Public Class mainForm
         Me.Close()
     End Sub
 
-    Private Sub BunifuButton2_Click_1(sender As Object, e As EventArgs) Handles BunifuButton2.Click
+    Private Sub BunifuButton2_Click_1(sender As Object, e As EventArgs) Handles btnDeleteExam.Click
         Try
             Dim cmdString As String = "delete from tbl_exams where exam_id=" & ListView1.SelectedItems(0).Tag
 
@@ -245,5 +243,20 @@ Public Class mainForm
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub BunifuButton1_Click_1(sender As Object, e As EventArgs) Handles btnAddExam.Click
+        Dim temp As New AddExaminationForm(con, subjectId)
+        temp.ShowDialog()
+        temp.Dispose()
+        refreshExams()
+    End Sub
+
+    Private Sub btnEditExam_Click(sender As Object, e As EventArgs) Handles btnEditExam.Click
+
+    End Sub
+
+    Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+
     End Sub
 End Class
