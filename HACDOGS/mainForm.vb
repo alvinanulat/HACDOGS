@@ -53,9 +53,11 @@ Public Class mainForm
     End Sub
 
     Private Sub Panel1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDoubleClick
+
         If a = 0 Then
             Me.WindowState = FormWindowState.Maximized
             a = 1
+
         Else
             Me.WindowState = FormWindowState.Normal
             a = 0
