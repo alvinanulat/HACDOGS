@@ -22,8 +22,9 @@ Partial Class AddQuestionsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddQuestionsForm))
         Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddQuestionsForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
@@ -36,11 +37,15 @@ Partial Class AddQuestionsForm
         Me.BunifuLabel4 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.txtWrongAnswer3 = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
         Me.BunifuLabel6 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.BunifuLabel5 = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.BunifuLabel5)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -108,7 +113,7 @@ Partial Class AddQuestionsForm
         Me.btnEnterQuestion.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.btnEnterQuestion.IdleIconLeftImage = Nothing
         Me.btnEnterQuestion.IdleIconRightImage = Nothing
-        Me.btnEnterQuestion.Location = New System.Drawing.Point(205, 377)
+        Me.btnEnterQuestion.Location = New System.Drawing.Point(144, 374)
         Me.btnEnterQuestion.Name = "btnEnterQuestion"
         StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
         StateProperties1.BorderRadius = 1
@@ -118,7 +123,7 @@ Partial Class AddQuestionsForm
         StateProperties1.IconRightImage = Nothing
         Me.btnEnterQuestion.onHoverState = StateProperties1
         Me.btnEnterQuestion.Size = New System.Drawing.Size(112, 45)
-        Me.btnEnterQuestion.TabIndex = 52
+        Me.btnEnterQuestion.TabIndex = 6
         Me.btnEnterQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtWrongAnswer1
@@ -158,7 +163,7 @@ Partial Class AddQuestionsForm
         Me.txtWrongAnswer1.ShortcutsEnabled = True
         Me.txtWrongAnswer1.Size = New System.Drawing.Size(507, 35)
         Me.txtWrongAnswer1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.txtWrongAnswer1.TabIndex = 51
+        Me.txtWrongAnswer1.TabIndex = 3
         Me.txtWrongAnswer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.txtWrongAnswer1.TextMarginLeft = 5
         Me.txtWrongAnswer1.TextPlaceholder = ""
@@ -201,7 +206,7 @@ Partial Class AddQuestionsForm
         Me.txtCorrectAnswer.ShortcutsEnabled = True
         Me.txtCorrectAnswer.Size = New System.Drawing.Size(507, 35)
         Me.txtCorrectAnswer.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.txtCorrectAnswer.TabIndex = 50
+        Me.txtCorrectAnswer.TabIndex = 2
         Me.txtCorrectAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.txtCorrectAnswer.TextMarginLeft = 5
         Me.txtCorrectAnswer.TextPlaceholder = ""
@@ -244,7 +249,7 @@ Partial Class AddQuestionsForm
         Me.txtQuestion.ShortcutsEnabled = True
         Me.txtQuestion.Size = New System.Drawing.Size(507, 35)
         Me.txtQuestion.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.txtQuestion.TabIndex = 49
+        Me.txtQuestion.TabIndex = 1
         Me.txtQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.txtQuestion.TextMarginLeft = 5
         Me.txtQuestion.TextPlaceholder = ""
@@ -287,7 +292,7 @@ Partial Class AddQuestionsForm
         Me.txtWrongAnswer2.ShortcutsEnabled = True
         Me.txtWrongAnswer2.Size = New System.Drawing.Size(507, 35)
         Me.txtWrongAnswer2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.txtWrongAnswer2.TabIndex = 56
+        Me.txtWrongAnswer2.TabIndex = 4
         Me.txtWrongAnswer2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.txtWrongAnswer2.TextMarginLeft = 5
         Me.txtWrongAnswer2.TextPlaceholder = ""
@@ -344,7 +349,7 @@ Partial Class AddQuestionsForm
         Me.txtWrongAnswer3.ShortcutsEnabled = True
         Me.txtWrongAnswer3.Size = New System.Drawing.Size(507, 35)
         Me.txtWrongAnswer3.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.txtWrongAnswer3.TabIndex = 58
+        Me.txtWrongAnswer3.TabIndex = 5
         Me.txtWrongAnswer3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.txtWrongAnswer3.TextMarginLeft = 5
         Me.txtWrongAnswer3.TextPlaceholder = ""
@@ -364,11 +369,58 @@ Partial Class AddQuestionsForm
         Me.BunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.BunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
+        'BunifuButton1
+        '
+        Me.BunifuButton1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuButton1.BackgroundImage = CType(resources.GetObject("BunifuButton1.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuButton1.ButtonText = "Cancel"
+        Me.BunifuButton1.ButtonTextMarginLeft = 0
+        Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.Gray
+        Me.BunifuButton1.DisabledForecolor = System.Drawing.Color.White
+        Me.BunifuButton1.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton1.IconPadding = 10
+        Me.BunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BunifuButton1.IdleBorderRadius = 1
+        Me.BunifuButton1.IdleBorderThickness = 0
+        Me.BunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BunifuButton1.IdleIconLeftImage = Nothing
+        Me.BunifuButton1.IdleIconRightImage = Nothing
+        Me.BunifuButton1.Location = New System.Drawing.Point(293, 374)
+        Me.BunifuButton1.Name = "BunifuButton1"
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.BorderRadius = 1
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.BunifuButton1.onHoverState = StateProperties2
+        Me.BunifuButton1.Size = New System.Drawing.Size(112, 45)
+        Me.BunifuButton1.TabIndex = 7
+        Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BunifuLabel5
+        '
+        Me.BunifuLabel5.AutoEllipsis = False
+        Me.BunifuLabel5.CursorType = Nothing
+        Me.BunifuLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuLabel5.Location = New System.Drawing.Point(220, 10)
+        Me.BunifuLabel5.Name = "BunifuLabel5"
+        Me.BunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BunifuLabel5.Size = New System.Drawing.Size(84, 18)
+        Me.BunifuLabel5.TabIndex = 0
+        Me.BunifuLabel5.Text = "Add Question"
+        Me.BunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.BunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
+        '
         'AddQuestionsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(532, 434)
+        Me.Controls.Add(Me.BunifuButton1)
         Me.Controls.Add(Me.txtWrongAnswer3)
         Me.Controls.Add(Me.BunifuLabel6)
         Me.Controls.Add(Me.txtWrongAnswer2)
@@ -383,7 +435,10 @@ Partial Class AddQuestionsForm
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AddQuestionsForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddQuestionsForm"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -401,4 +456,6 @@ Partial Class AddQuestionsForm
     Friend WithEvents BunifuLabel4 As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents txtWrongAnswer3 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox
     Friend WithEvents BunifuLabel6 As Bunifu.UI.WinForms.BunifuLabel
+    Friend WithEvents BunifuButton1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents BunifuLabel5 As Bunifu.UI.WinForms.BunifuLabel
 End Class

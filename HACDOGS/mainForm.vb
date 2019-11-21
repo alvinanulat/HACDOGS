@@ -302,4 +302,33 @@ Public Class mainForm
         refreshQuestions()
         temp.Dispose()
     End Sub
+
+    Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles BunifuButton4.Click
+        Dim qList As List(Of String) = New List(Of String)
+
+        For Each lvi As ListViewItem In ListView2.Items
+            qList.Add(lvi.Tag)
+        Next
+
+        MessageBox.Show(qList.Count)
+    End Sub
+
+    Private rnd As New Random()
+
+    Public Sub Shuffle(items As String())
+        Dim j As Int32
+        Dim temp As String
+
+        For n As Int32 = items.Length - 1 To 0 Step -1
+            j = rnd.Next(0, n + 1)
+            ' Swap them.
+            temp = items(n)
+            items(n) = items(j)
+            items(j) = temp
+        Next n
+    End Sub
+
+    Private Sub ListView2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView2.SelectedIndexChanged
+
+    End Sub
 End Class

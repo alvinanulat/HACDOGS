@@ -23,7 +23,8 @@ Public Class AddExaminationForm
     End Sub
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
         Try
-            Dim cmdString As String = "insert into tbl_exams values (null, '" & BunifuTextBox1.Text & "', '" & subjectId & "', '" & BunifuTextBox2.Text & "', '" & BunifuTextBox3.Text & "');"
+            Dim cmdString As String = "insert into tbl_exams values (null, '" & BunifuTextBox1.Text & "', '" & subjectId & "', '0','" & BunifuTextBox2.Text & "', '" & BunifuTextBox3.Text & "');"
+
             Dim cmd As SQLiteCommand
             cmd = New SQLiteCommand(cmdString, con)
             cmd.ExecuteNonQuery()
@@ -46,5 +47,9 @@ Public Class AddExaminationForm
         If e.KeyCode = Keys.Enter Then
             BunifuButton1.PerformClick()
         End If
+    End Sub
+
+    Private Sub BunifuButton2_Click(sender As Object, e As EventArgs) Handles BunifuButton2.Click
+        Me.Close()
     End Sub
 End Class

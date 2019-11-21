@@ -27,8 +27,13 @@ Public Class AddQuestionsForm
             Dim cmd As New SQLiteCommand(cmdString, con)
             cmd.ExecuteNonQuery()
             Me.Close()
+            cmd.Dispose()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
+    End Sub
+
+    Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
+        Me.Close()
     End Sub
 End Class
