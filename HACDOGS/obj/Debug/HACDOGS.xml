@@ -22,5 +22,40 @@ HACDOGS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:HACDOGS.My.Resources.Resources.bg1000">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HACDOGS.My.Resources.Resources.full">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HACDOGS.My.Resources.Resources.full2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HACDOGS.My.Resources.Resources.min">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HACDOGS.My.Resources.Resources.min2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HACDOGS.My.Resources.Resources.x2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HACDOGS.My.Resources.Resources.x21">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

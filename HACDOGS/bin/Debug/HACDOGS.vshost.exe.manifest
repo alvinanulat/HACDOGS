@@ -67,14 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="774144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="622288">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4OEmw7inupUB0D+Z1Upcu9F0vOy2FwCYq0zBIZ8n+TM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="1008128">
       <assemblyIdentity name="HACDOGS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2tcnjjFLg77stFu3pyjR/bQ0uCNOZBQi33Di+Txd/Ls=</dsig:DigestValue>
+        <dsig:DigestValue>DYUZm+Dyk8wCDDctx5SrrkB9fBfhLjIRJ98n+R4hTOY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -132,13 +144,13 @@
       <dsig:DigestValue>FEOG00T0ir4W3cxYHmPTWQwNpPkBPiIdZT7AMZZxDaM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="HACDOGS.exe.config" size="1753">
+  <file name="HACDOGS.exe.config" size="1039">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Cf/gLpIBVuWkw3ERtqej2EoLjLsYGzzYKwjrDqvIRU4=</dsig:DigestValue>
+      <dsig:DigestValue>rBF1OAAU88EgkF9QqcFzvoWwg2Qq1kdXZjoRGo48Tlc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

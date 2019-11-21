@@ -5,6 +5,16 @@ Public Class mainForm
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+
+    Dim locationdb As String = Environment.CurrentDirectory & "\dbs\"
+    Dim fileName As String = "db_main.db3"
+    'Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
+    Public connectString As String = String.Format("Data Source = {0}", fullPath)
+
+    Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
+    Dim conString As String = "Data Source = " & fullPath & ";password=anulatbuen;"
+    Dim con As SQLiteConnection
+
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
         drag = True
         'Me.WindowState = FormWindowState.Normal
@@ -58,11 +68,22 @@ Public Class mainForm
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 
-    Dim locationdb As String = Environment.CurrentDirectory & "\dbs\"
-    Dim fileName As String = "db_main.db3"
-    Dim fullPath As String = System.IO.Path.Combine(locationdb, fileName)
-    Public connectString As String = String.Format("Data Source = {0}", fullPath)
+
     Private Sub mainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub mainForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        BunifuVScrollBar1.Maximum = FlowLayoutPanel1.VerticalScroll.Maximum
+        BunifuVScrollBar1.Minimum = FlowLayoutPanel1.VerticalScroll.Minimum
+        'BunifuVScrollBar1.ThumbLength = FlowLayoutPanel1.VerticalScroll.
+    End Sub
+
+    Private Sub BunifuVScrollBar1_Scroll(sender As Object, e As Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs) Handles BunifuVScrollBar1.Scroll
+        FlowLayoutPanel1.AutoScrollPosition = New Point(FlowLayoutPanel1.AutoScrollPosition.X, e.Value)
     End Sub
 End Class

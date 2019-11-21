@@ -62,7 +62,7 @@ Public Class registerForm
         da.Fill(table)
         cbUser.DataSource = table
         cbUser.DisplayMember = "username"
-        cbUser.ValueMember = "id"
+        cbUser.ValueMember = "account_id"
         cbUser.ResetText()
     End Sub
 
@@ -131,6 +131,8 @@ Public Class registerForm
 
             If (Not loggingIn) Then
                 MessageBox.Show("Username or password is incorrect.")
+                txtPass1.Clear()
+                txtPass1.Select()
             Else
                 ' Dim newForm As New main(comPort, username, user_id)
                 ' newForm.Show()

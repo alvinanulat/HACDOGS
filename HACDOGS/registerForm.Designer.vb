@@ -28,6 +28,7 @@ Partial Class registerForm
         Me.closeButton = New System.Windows.Forms.PictureBox()
         Me.minimizeButton = New System.Windows.Forms.PictureBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
+        Me.cbUser = New System.Windows.Forms.ComboBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtPass1 = New System.Windows.Forms.TextBox()
@@ -36,8 +37,6 @@ Partial Class registerForm
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse4 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse5 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.pnlRegister = New System.Windows.Forms.Panel()
@@ -56,7 +55,6 @@ Partial Class registerForm
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BunifuElipse10 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.cbUser = New System.Windows.Forms.ComboBox()
         Me.BunifuElipse11 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         CType(Me.closeButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.minimizeButton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +81,8 @@ Partial Class registerForm
         'closeButton
         '
         Me.closeButton.BackColor = System.Drawing.Color.Red
+        Me.closeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.x21
+        Me.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.closeButton.Location = New System.Drawing.Point(12, 5)
         Me.closeButton.Name = "closeButton"
         Me.closeButton.Size = New System.Drawing.Size(18, 18)
@@ -91,7 +91,9 @@ Partial Class registerForm
         '
         'minimizeButton
         '
-        Me.minimizeButton.BackColor = System.Drawing.Color.DarkGray
+        Me.minimizeButton.BackColor = System.Drawing.Color.Transparent
+        Me.minimizeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.min2
+        Me.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.minimizeButton.Location = New System.Drawing.Point(36, 5)
         Me.minimizeButton.Name = "minimizeButton"
         Me.minimizeButton.Size = New System.Drawing.Size(18, 18)
@@ -111,6 +113,14 @@ Partial Class registerForm
         Me.pnlLogin.Name = "pnlLogin"
         Me.pnlLogin.Size = New System.Drawing.Size(269, 312)
         Me.pnlLogin.TabIndex = 40
+        '
+        'cbUser
+        '
+        Me.cbUser.FormattingEnabled = True
+        Me.cbUser.Location = New System.Drawing.Point(92, 148)
+        Me.cbUser.Name = "cbUser"
+        Me.cbUser.Size = New System.Drawing.Size(121, 21)
+        Me.cbUser.TabIndex = 3
         '
         'btnLogin
         '
@@ -167,7 +177,7 @@ Partial Class registerForm
         Me.showregButton.Location = New System.Drawing.Point(91, 261)
         Me.showregButton.Name = "showregButton"
         Me.showregButton.Size = New System.Drawing.Size(86, 40)
-        Me.showregButton.TabIndex = 17
+        Me.showregButton.TabIndex = 6
         Me.showregButton.Text = "Create an Account"
         Me.showregButton.UseVisualStyleBackColor = False
         '
@@ -198,16 +208,6 @@ Partial Class registerForm
         Me.Label1.Size = New System.Drawing.Size(75, 16)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "HACDOGS"
-        '
-        'BunifuElipse2
-        '
-        Me.BunifuElipse2.ElipseRadius = 20
-        Me.BunifuElipse2.TargetControl = Me.minimizeButton
-        '
-        'BunifuElipse3
-        '
-        Me.BunifuElipse3.ElipseRadius = 20
-        Me.BunifuElipse3.TargetControl = Me.closeButton
         '
         'BunifuElipse4
         '
@@ -365,14 +365,6 @@ Partial Class registerForm
         Me.PictureBox4.TabIndex = 34
         Me.PictureBox4.TabStop = False
         '
-        'cbUser
-        '
-        Me.cbUser.FormattingEnabled = True
-        Me.cbUser.Location = New System.Drawing.Point(92, 148)
-        Me.cbUser.Name = "cbUser"
-        Me.cbUser.Size = New System.Drawing.Size(121, 21)
-        Me.cbUser.TabIndex = 21
-        '
         'BunifuElipse11
         '
         Me.BunifuElipse11.ElipseRadius = 10
@@ -386,8 +378,8 @@ Partial Class registerForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(756, 399)
         Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlRegister)
+        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
@@ -421,8 +413,6 @@ Partial Class registerForm
     Friend WithEvents showregButton As Button
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents BunifuElipse3 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents BunifuElipse4 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents BunifuElipse5 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents BunifuElipse6 As Bunifu.Framework.UI.BunifuElipse
