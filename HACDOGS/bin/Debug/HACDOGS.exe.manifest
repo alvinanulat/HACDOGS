@@ -127,6 +127,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.Drawer.dll" size="33776">
+      <assemblyIdentity name="Bunifu.UI.WinForms.Drawer" version="1.9.0.1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>k6pMiQyu4q/Lafr/9ap+uBxiqrWih7+rSK8L8J9mQu4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.ToggleSwitch.dll" size="38384">
       <assemblyIdentity name="Bunifu.UI.WinForms.ToggleSwitch" version="1.9.0.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -135,6 +147,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>0TneUzRbvTN8C2m0k9NIlnFrQWNIUAmuk/F930ETxQ8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu_UI_v1.5.3.dll" size="391168">
+      <assemblyIdentity name="Bunifu_UI_v1.5.3" version="1.5.3.0" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>eC9ORbLoBNa0dBzAmJ2c2fp4qNE/DPUcUFP2yQ+Oz5I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -175,14 +199,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="854016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="868864">
       <assemblyIdentity name="HACDOGS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>di10tgh+OPik+aLq53Z50I2nD0LtkI8yi173+MLwyJ0=</dsig:DigestValue>
+        <dsig:DigestValue>tXZkRwd2TpaRYrE9os34Y14KjxHqAn5GLDwX5w4NFHg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -182,6 +182,8 @@ Public Class mainForm
                 lvi.SubItems.Add(dr.GetString(2))
                 lvi.SubItems.Add(dr.GetString(4))
                 lvi.SubItems.Add(dr.GetString(5))
+                lvi.SubItems.Add(dr.GetString(6))
+                lvi.SubItems.Add(dr.GetString(7))
 
                 ListView2.Items.Add(lvi)
             End While
@@ -294,5 +296,10 @@ Public Class mainForm
         refreshQuestions()
     End Sub
 
-
+    Private Sub BunifuButton2_Click_2(sender As Object, e As EventArgs) Handles BunifuButton2.Click
+        Dim temp As AddQuestionsForm = New AddQuestionsForm(con, examId)
+        temp.ShowDialog()
+        refreshQuestions()
+        temp.Dispose()
+    End Sub
 End Class

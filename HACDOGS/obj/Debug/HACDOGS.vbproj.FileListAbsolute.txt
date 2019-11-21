@@ -106,3 +106,8 @@ C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.exe.ma
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.application
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.pdb
 C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.AddExaminationForm.resources
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.Drawer.dll
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.Drawer.xml
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.AddQuestionsForm.resources
