@@ -23,19 +23,19 @@ Partial Class mainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim StateProperties20 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties18 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties19 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
-        Dim StateProperties16 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties17 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.minimizeButton = New System.Windows.Forms.PictureBox()
         Me.closeButton = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblLoggedIn = New Bunifu.UI.WinForms.BunifuLabel()
         Me.btnLogout = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.lblLoggedIn = New Bunifu.UI.WinForms.BunifuLabel()
         Me.btnMaximize = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtAddSubject = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
@@ -108,21 +108,6 @@ Partial Class mainForm
         Me.Panel1.Size = New System.Drawing.Size(807, 34)
         Me.Panel1.TabIndex = 42
         '
-        'lblLoggedIn
-        '
-        Me.lblLoggedIn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblLoggedIn.AutoEllipsis = False
-        Me.lblLoggedIn.CursorType = Nothing
-        Me.lblLoggedIn.Font = New System.Drawing.Font("SansSerif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.lblLoggedIn.Location = New System.Drawing.Point(523, 10)
-        Me.lblLoggedIn.Name = "lblLoggedIn"
-        Me.lblLoggedIn.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblLoggedIn.Size = New System.Drawing.Size(63, 17)
-        Me.lblLoggedIn.TabIndex = 43
-        Me.lblLoggedIn.Text = "Logged in:"
-        Me.lblLoggedIn.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.lblLoggedIn.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
-        '
         'btnLogout
         '
         Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -145,16 +130,31 @@ Partial Class mainForm
         Me.btnLogout.IdleIconRightImage = Nothing
         Me.btnLogout.Location = New System.Drawing.Point(712, 7)
         Me.btnLogout.Name = "btnLogout"
-        StateProperties20.BorderColor = System.Drawing.Color.DarkRed
-        StateProperties20.BorderRadius = 1
-        StateProperties20.BorderThickness = 0
-        StateProperties20.FillColor = System.Drawing.Color.DarkRed
-        StateProperties20.IconLeftImage = Nothing
-        StateProperties20.IconRightImage = Nothing
-        Me.btnLogout.onHoverState = StateProperties20
+        StateProperties3.BorderColor = System.Drawing.Color.DarkRed
+        StateProperties3.BorderRadius = 1
+        StateProperties3.BorderThickness = 0
+        StateProperties3.FillColor = System.Drawing.Color.DarkRed
+        StateProperties3.IconLeftImage = Nothing
+        StateProperties3.IconRightImage = Nothing
+        Me.btnLogout.onHoverState = StateProperties3
         Me.btnLogout.Size = New System.Drawing.Size(83, 20)
         Me.btnLogout.TabIndex = 42
         Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'lblLoggedIn
+        '
+        Me.lblLoggedIn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblLoggedIn.AutoEllipsis = False
+        Me.lblLoggedIn.CursorType = Nothing
+        Me.lblLoggedIn.Font = New System.Drawing.Font("SansSerif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.lblLoggedIn.Location = New System.Drawing.Point(523, 10)
+        Me.lblLoggedIn.Name = "lblLoggedIn"
+        Me.lblLoggedIn.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblLoggedIn.Size = New System.Drawing.Size(63, 17)
+        Me.lblLoggedIn.TabIndex = 43
+        Me.lblLoggedIn.Text = "Logged in:"
+        Me.lblLoggedIn.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblLoggedIn.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'btnMaximize
         '
@@ -250,19 +250,21 @@ Partial Class mainForm
         Me.btnAddSubject.IdleIconRightImage = Nothing
         Me.btnAddSubject.Location = New System.Drawing.Point(12, 662)
         Me.btnAddSubject.Name = "btnAddSubject"
-        StateProperties18.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties18.BorderRadius = 1
-        StateProperties18.BorderThickness = 1
-        StateProperties18.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties18.IconLeftImage = Nothing
-        StateProperties18.IconRightImage = Nothing
-        Me.btnAddSubject.onHoverState = StateProperties18
+        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties4.BorderRadius = 1
+        StateProperties4.BorderThickness = 1
+        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties4.IconLeftImage = Nothing
+        StateProperties4.IconRightImage = Nothing
+        Me.btnAddSubject.onHoverState = StateProperties4
         Me.btnAddSubject.Size = New System.Drawing.Size(192, 30)
         Me.btnAddSubject.TabIndex = 41
         Me.btnAddSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FlowLayoutPanel1
         '
+        Me.FlowLayoutPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(13, 47)
@@ -293,13 +295,13 @@ Partial Class mainForm
         Me.btnDeleteSubject.IdleIconRightImage = Nothing
         Me.btnDeleteSubject.Location = New System.Drawing.Point(12, 698)
         Me.btnDeleteSubject.Name = "btnDeleteSubject"
-        StateProperties19.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties19.BorderRadius = 1
-        StateProperties19.BorderThickness = 1
-        StateProperties19.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties19.IconLeftImage = Nothing
-        StateProperties19.IconRightImage = Nothing
-        Me.btnDeleteSubject.onHoverState = StateProperties19
+        StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties5.BorderRadius = 1
+        StateProperties5.BorderThickness = 1
+        StateProperties5.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties5.IconLeftImage = Nothing
+        StateProperties5.IconRightImage = Nothing
+        Me.btnDeleteSubject.onHoverState = StateProperties5
         Me.btnDeleteSubject.Size = New System.Drawing.Size(192, 30)
         Me.btnDeleteSubject.TabIndex = 40
         Me.btnDeleteSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -352,13 +354,13 @@ Partial Class mainForm
         Me.BunifuButton1.IdleIconRightImage = Nothing
         Me.BunifuButton1.Location = New System.Drawing.Point(228, 341)
         Me.BunifuButton1.Name = "BunifuButton1"
-        StateProperties16.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties16.BorderRadius = 1
-        StateProperties16.BorderThickness = 1
-        StateProperties16.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties16.IconLeftImage = Nothing
-        StateProperties16.IconRightImage = Nothing
-        Me.BunifuButton1.onHoverState = StateProperties16
+        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties1.BorderRadius = 1
+        StateProperties1.BorderThickness = 1
+        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties1.IconLeftImage = Nothing
+        StateProperties1.IconRightImage = Nothing
+        Me.BunifuButton1.onHoverState = StateProperties1
         Me.BunifuButton1.Size = New System.Drawing.Size(192, 30)
         Me.BunifuButton1.TabIndex = 43
         Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -372,7 +374,6 @@ Partial Class mainForm
         Me.BunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
         Me.BunifuButton2.DisabledFillColor = System.Drawing.Color.Gray
         Me.BunifuButton2.DisabledForecolor = System.Drawing.Color.White
-        Me.BunifuButton2.Enabled = False
         Me.BunifuButton2.ForeColor = System.Drawing.Color.White
         Me.BunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default
         Me.BunifuButton2.IconPadding = 10
@@ -385,13 +386,13 @@ Partial Class mainForm
         Me.BunifuButton2.IdleIconRightImage = Nothing
         Me.BunifuButton2.Location = New System.Drawing.Point(446, 341)
         Me.BunifuButton2.Name = "BunifuButton2"
-        StateProperties17.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties17.BorderRadius = 1
-        StateProperties17.BorderThickness = 1
-        StateProperties17.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties17.IconLeftImage = Nothing
-        StateProperties17.IconRightImage = Nothing
-        Me.BunifuButton2.onHoverState = StateProperties17
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.BorderRadius = 1
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.BunifuButton2.onHoverState = StateProperties2
         Me.BunifuButton2.Size = New System.Drawing.Size(192, 30)
         Me.BunifuButton2.TabIndex = 42
         Me.BunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

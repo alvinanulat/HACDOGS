@@ -20,6 +20,8 @@ Public Class mainForm
 
     Public userId As Integer
     Public username As String
+
+    Private subjectId As String
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
         drag = True
         'Me.WindowState = FormWindowState.Normal
@@ -138,8 +140,33 @@ Public Class mainForm
 
     End Sub
 
+    Private Sub refreshExams()
+        Dim dr As SQLiteDataReader
+        Dim cmdString As String = "select * from tbl_exams where subject_id='" & subjectId & "';"
+        Dim lvi As ListViewItem
+        Dim i As Integer = 1
+        cmd = New SQLiteCommand(cmdString, con)
+        dr = cmd.ExecuteReader()
+
+        ListView1.Items.Clear()
+        While dr.Read()
+            lvi = New ListViewItem()
+            lvi.Text = i
+            i += 1
+            lvi.Tag = dr.GetInt16(0)
+            lvi.SubItems.Add(dr.GetString(1))
+            lvi.SubItems.Add(dr.GetString(3))
+            lvi.SubItems.Add(dr.GetString(4))
+            ListView1.Items.Add(lvi)
+        End While
+        dr.Close()
+        'MessageBox.Show(subject)
+
+    End Sub
+
     Private Function subjectButtonsHandler(ByVal subject As String, ByVal subjectName As String) As String
         lblSubjectName.Text = subjectName
+        subjectId = subject
         If isDeletingSubject Then
             Dim deleteYN As System.Windows.Forms.DialogResult
             deleteYN = MsgBox("Do you really want to delete the subject?", MsgBoxStyle.YesNo)
@@ -154,25 +181,7 @@ Public Class mainForm
                 End Try
             End If
         Else
-            Dim dr As SQLiteDataReader
-            Dim cmdString As String = "select * from tbl_exams where subject_id='" & subject & "';"
-            Dim lvi As ListViewItem
-            Dim i As Integer = 1
-            cmd = New SQLiteCommand(cmdString, con)
-            dr = cmd.ExecuteReader()
-
-            ListView1.Items.Clear()
-            While dr.Read()
-                lvi = New ListViewItem()
-                lvi.Text = i
-                i += 1
-                lvi.SubItems.Add(dr.GetString(1))
-                lvi.SubItems.Add(dr.GetString(3))
-                lvi.SubItems.Add(dr.GetString(4))
-                ListView1.Items.Add(lvi)
-            End While
-            dr.Close()
-            'MessageBox.Show(subject)
+            refreshExams()
         End If
 
         Return ""
@@ -221,19 +230,20 @@ Public Class mainForm
         Me.Close()
     End Sub
 
-    Private Sub ListView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseDoubleClick
+    Private Sub BunifuButton2_Click_1(sender As Object, e As EventArgs) Handles BunifuButton2.Click
+        Try
+            Dim cmdString As String = "delete from tbl_exams where exam_id=" & ListView1.SelectedItems(0).Tag
 
-    End Sub
+            Dim deleteYN As System.Windows.Forms.DialogResult
+            deleteYN = MsgBox("Do you really want to delete the examination?", MsgBoxStyle.YesNo)
+            If deleteYN = MsgBoxResult.Yes Then
 
-    Private Sub ListView1_CursorChanged(sender As Object, e As EventArgs) Handles ListView1.CursorChanged
+                cmd = New SQLiteCommand(cmdString, con)
+                cmd.ExecuteNonQuery()
+                refreshExams()
+            End If
+        Catch ex As Exception
 
-    End Sub
-
-    Private Sub BunifuButton1_Click_1(sender As Object, e As EventArgs) Handles BunifuButton1.Click
-
-    End Sub
-
-    Private Sub lblLoggedIn_Click(sender As Object, e As EventArgs) Handles lblLoggedIn.Click
-
+        End Try
     End Sub
 End Class
