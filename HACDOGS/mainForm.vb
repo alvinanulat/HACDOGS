@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SQLite
+Imports System.Text.RegularExpressions
+
 Public Class mainForm
     'Dim locphotos As String = Environment.CurrentDirectory & "\data\photos\"
 
@@ -23,6 +25,7 @@ Public Class mainForm
 
     Private subjectId As String
     Private examId As String
+    Private setId As String
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
         drag = True
         'Me.WindowState = FormWindowState.Normal
@@ -147,6 +150,8 @@ Public Class mainForm
         cmd = New SQLiteCommand(cmdString, con)
         dr = cmd.ExecuteReader()
 
+        ListView2.Items.Clear()
+        ListView3.Items.Clear()
         ListView1.Items.Clear()
         While dr.Read()
             lvi = New ListViewItem()
@@ -173,6 +178,7 @@ Public Class mainForm
             cmd = New SQLiteCommand(cmdString, con)
             dr = cmd.ExecuteReader()
 
+            ListView3.Items.Clear()
             ListView2.Items.Clear()
             While dr.Read()
                 lvi = New ListViewItem
@@ -212,6 +218,7 @@ Public Class mainForm
             End If
         Else
             refreshExams()
+
         End If
 
         Return ""
@@ -291,9 +298,7 @@ Public Class mainForm
     End Sub
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
-        lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
-        examId = ListView1.SelectedItems(0).Tag
-        refreshQuestions()
+
     End Sub
 
     Private Sub BunifuButton2_Click_2(sender As Object, e As EventArgs) Handles BunifuButton2.Click
@@ -305,19 +310,50 @@ Public Class mainForm
 
     Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles BunifuButton4.Click
         Dim qList As List(Of String) = New List(Of String)
+        Dim aList As String = ""
 
         For Each lvi As ListViewItem In ListView2.Items
             qList.Add(lvi.Tag)
         Next
 
-        MessageBox.Show(qList.Count)
+        If qList.Count <= 0 Then
+            Exit Sub
+        End If
+
+        Dim now As Date = New Date().Now()
+        Dim dateTimeNow As String = Regex.Replace(now.ToShortDateString & now.ToLongTimeString, "[^0-9]", "")
+
+
+        'MessageBox.Show(aList)
+        For j As Integer = 1 To Integer.Parse(txtNumberOfSets.Text)
+            Try
+                For i As Integer = 1 To qList.Count
+                    aList &= rnd.Next(1, 4).ToString() & ","
+                Next
+
+                aList = aList.Substring(0, aList.Length - 1)
+
+
+                Dim cmdString As String = "insert into tbl_sets values (null, '" & examId & "','" & Shuffle(qList.ToArray()) & "','" & aList & "','" & dateTimeNow & "_" & j & "');"
+                cmd = New SQLiteCommand(cmdString, con)
+                cmd.ExecuteNonQuery()
+
+
+
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString)
+            End Try
+        Next
+        refreshSets()
+
     End Sub
 
     Private rnd As New Random()
 
-    Public Sub Shuffle(items As String())
+    Public Function Shuffle(items As String()) As String
         Dim j As Int32
         Dim temp As String
+        Dim output As String = ""
 
         For n As Int32 = items.Length - 1 To 0 Step -1
             j = rnd.Next(0, n + 1)
@@ -326,9 +362,78 @@ Public Class mainForm
             items(n) = items(j)
             items(j) = temp
         Next n
+
+        For Each i As String In items
+            output &= i & ","
+        Next
+
+        Return output.Substring(0, output.Length - 1)
+
+    End Function
+
+    Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
+        lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
+        examId = ListView1.SelectedItems(0).Tag
+        refreshQuestions()
+        refreshSets()
     End Sub
 
-    Private Sub ListView2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView2.SelectedIndexChanged
+    Private Sub refreshSets()
+        Try
+            Dim i As Integer = 1
+            Dim lvi As ListViewItem
+            Dim dr As SQLiteDataReader
+            Dim cmdString As String = "select * from tbl_sets where exam_id='" & examId & "';"
+            cmd = New SQLiteCommand(cmdString, con)
+            dr = cmd.ExecuteReader()
+
+            ListView3.Items.Clear()
+            While dr.Read()
+                lvi = New ListViewItem
+                lvi.Text = i
+                i += 1
+                lvi.Tag = dr.GetInt16(0)
+                lvi.SubItems.Add(dr.GetString(4))
+
+                ListView3.Items.Add(lvi)
+            End While
+            dr.Close()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles BunifuButton3.Click
+        Try
+            Dim index As String = ListView2.SelectedItems(0).Tag
+            Dim cmdString As String = "delete from tbl_questions where question_id='" & index & "';"
+            cmd = New SQLiteCommand(cmdString, con)
+            Dim DeleteYN As System.Windows.Forms.DialogResult
+            DeleteYN = MsgBox("Do you really want to delete the question?", MsgBoxStyle.YesNo)
+            If DeleteYN = MsgBoxResult.Yes Then
+                cmd.ExecuteNonQuery()
+                refreshQuestions()
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles btnWord.Click
+
+    End Sub
+
+    Private Sub BunifuButton6_Click(sender As Object, e As EventArgs) Handles btnAnswerKey.Click
+        Dim temp As New AnswerKey(con, setId)
+        temp.ShowDialog()
+    End Sub
+
+    Private Sub ListView3_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView3.MouseClick
+        'lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
+        setId = ListView3.SelectedItems(0).Tag
 
     End Sub
 End Class

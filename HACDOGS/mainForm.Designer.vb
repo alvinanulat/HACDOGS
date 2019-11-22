@@ -23,30 +23,25 @@ Partial Class mainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim StateProperties28 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties29 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties30 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
-        Dim StateProperties21 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties22 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties23 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties24 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties25 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties26 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties27 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties9 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties10 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties11 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties12 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnLogout = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.lblLoggedIn = New Bunifu.UI.WinForms.BunifuLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtAddSubject = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
-        Me.btnAddSubject = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.btnDeleteSubject = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.btnMaximize = New System.Windows.Forms.PictureBox()
-        Me.minimizeButton = New System.Windows.Forms.PictureBox()
-        Me.closeButton = New System.Windows.Forms.PictureBox()
         Me.lblSubjectName = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
@@ -65,6 +60,14 @@ Partial Class mainForm
         Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lblExamName = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNumberOfSets = New System.Windows.Forms.TextBox()
+        Me.ListView3 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnAnswerKey = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btnWord = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuButton4 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuButton2 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
@@ -72,8 +75,13 @@ Partial Class mainForm
         Me.btnEditExam = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.btnAddExam = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.btnDeleteExam = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtNumberOfSets = New System.Windows.Forms.TextBox()
+        Me.btnLogout = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.txtAddSubject = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
+        Me.btnAddSubject = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btnDeleteSubject = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.btnMaximize = New System.Windows.Forms.PictureBox()
+        Me.minimizeButton = New System.Windows.Forms.PictureBox()
+        Me.closeButton = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,39 +116,6 @@ Partial Class mainForm
         Me.Panel1.Size = New System.Drawing.Size(807, 34)
         Me.Panel1.TabIndex = 42
         '
-        'btnLogout
-        '
-        Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLogout.BackColor = System.Drawing.Color.Transparent
-        Me.btnLogout.BackgroundImage = CType(resources.GetObject("btnLogout.BackgroundImage"), System.Drawing.Image)
-        Me.btnLogout.ButtonText = "Log-out"
-        Me.btnLogout.ButtonTextMarginLeft = 0
-        Me.btnLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.btnLogout.DisabledFillColor = System.Drawing.Color.Gray
-        Me.btnLogout.DisabledForecolor = System.Drawing.Color.White
-        Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.btnLogout.IconPadding = 10
-        Me.btnLogout.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.btnLogout.IdleBorderColor = System.Drawing.Color.Firebrick
-        Me.btnLogout.IdleBorderRadius = 1
-        Me.btnLogout.IdleBorderThickness = 0
-        Me.btnLogout.IdleFillColor = System.Drawing.Color.Firebrick
-        Me.btnLogout.IdleIconLeftImage = Nothing
-        Me.btnLogout.IdleIconRightImage = Nothing
-        Me.btnLogout.Location = New System.Drawing.Point(712, 7)
-        Me.btnLogout.Name = "btnLogout"
-        StateProperties28.BorderColor = System.Drawing.Color.DarkRed
-        StateProperties28.BorderRadius = 1
-        StateProperties28.BorderThickness = 0
-        StateProperties28.FillColor = System.Drawing.Color.DarkRed
-        StateProperties28.IconLeftImage = Nothing
-        StateProperties28.IconRightImage = Nothing
-        Me.btnLogout.onHoverState = StateProperties28
-        Me.btnLogout.Size = New System.Drawing.Size(83, 20)
-        Me.btnLogout.TabIndex = 42
-        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'lblLoggedIn
         '
         Me.lblLoggedIn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -173,83 +148,6 @@ Partial Class mainForm
         Me.Panel2.Size = New System.Drawing.Size(217, 740)
         Me.Panel2.TabIndex = 43
         '
-        'txtAddSubject
-        '
-        Me.txtAddSubject.AcceptsReturn = False
-        Me.txtAddSubject.AcceptsTab = False
-        Me.txtAddSubject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtAddSubject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.txtAddSubject.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.txtAddSubject.BackColor = System.Drawing.Color.Transparent
-        Me.txtAddSubject.BackgroundImage = CType(resources.GetObject("txtAddSubject.BackgroundImage"), System.Drawing.Image)
-        Me.txtAddSubject.BorderColorActive = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(145, Byte), Integer))
-        Me.txtAddSubject.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.txtAddSubject.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.txtAddSubject.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.txtAddSubject.BorderRadius = 1
-        Me.txtAddSubject.BorderThickness = 2
-        Me.txtAddSubject.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.txtAddSubject.DefaultFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddSubject.DefaultText = ""
-        Me.txtAddSubject.FillColor = System.Drawing.Color.White
-        Me.txtAddSubject.HideSelection = True
-        Me.txtAddSubject.IconLeft = Nothing
-        Me.txtAddSubject.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.txtAddSubject.IconPadding = 10
-        Me.txtAddSubject.IconRight = Nothing
-        Me.txtAddSubject.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.txtAddSubject.Location = New System.Drawing.Point(12, 622)
-        Me.txtAddSubject.MaxLength = 32767
-        Me.txtAddSubject.MinimumSize = New System.Drawing.Size(100, 35)
-        Me.txtAddSubject.Modified = False
-        Me.txtAddSubject.Name = "txtAddSubject"
-        Me.txtAddSubject.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtAddSubject.ReadOnly = False
-        Me.txtAddSubject.SelectedText = ""
-        Me.txtAddSubject.SelectionLength = 0
-        Me.txtAddSubject.SelectionStart = 0
-        Me.txtAddSubject.ShortcutsEnabled = True
-        Me.txtAddSubject.Size = New System.Drawing.Size(196, 35)
-        Me.txtAddSubject.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.txtAddSubject.TabIndex = 42
-        Me.txtAddSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.txtAddSubject.TextMarginLeft = 5
-        Me.txtAddSubject.TextPlaceholder = ""
-        Me.txtAddSubject.UseSystemPasswordChar = False
-        '
-        'btnAddSubject
-        '
-        Me.btnAddSubject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAddSubject.BackColor = System.Drawing.Color.Transparent
-        Me.btnAddSubject.BackgroundImage = CType(resources.GetObject("btnAddSubject.BackgroundImage"), System.Drawing.Image)
-        Me.btnAddSubject.ButtonText = "Add Subject"
-        Me.btnAddSubject.ButtonTextMarginLeft = 0
-        Me.btnAddSubject.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.btnAddSubject.DisabledFillColor = System.Drawing.Color.Gray
-        Me.btnAddSubject.DisabledForecolor = System.Drawing.Color.White
-        Me.btnAddSubject.ForeColor = System.Drawing.Color.White
-        Me.btnAddSubject.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.btnAddSubject.IconPadding = 10
-        Me.btnAddSubject.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.btnAddSubject.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnAddSubject.IdleBorderRadius = 1
-        Me.btnAddSubject.IdleBorderThickness = 0
-        Me.btnAddSubject.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnAddSubject.IdleIconLeftImage = Nothing
-        Me.btnAddSubject.IdleIconRightImage = Nothing
-        Me.btnAddSubject.Location = New System.Drawing.Point(12, 662)
-        Me.btnAddSubject.Name = "btnAddSubject"
-        StateProperties29.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties29.BorderRadius = 1
-        StateProperties29.BorderThickness = 1
-        StateProperties29.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties29.IconLeftImage = Nothing
-        StateProperties29.IconRightImage = Nothing
-        Me.btnAddSubject.onHoverState = StateProperties29
-        Me.btnAddSubject.Size = New System.Drawing.Size(192, 30)
-        Me.btnAddSubject.TabIndex = 41
-        Me.btnAddSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -261,72 +159,6 @@ Partial Class mainForm
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(200, 569)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
-        '
-        'btnDeleteSubject
-        '
-        Me.btnDeleteSubject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnDeleteSubject.BackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteSubject.BackgroundImage = CType(resources.GetObject("btnDeleteSubject.BackgroundImage"), System.Drawing.Image)
-        Me.btnDeleteSubject.ButtonText = "Delete Subject"
-        Me.btnDeleteSubject.ButtonTextMarginLeft = 0
-        Me.btnDeleteSubject.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.btnDeleteSubject.DisabledFillColor = System.Drawing.Color.Gray
-        Me.btnDeleteSubject.DisabledForecolor = System.Drawing.Color.White
-        Me.btnDeleteSubject.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteSubject.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.btnDeleteSubject.IconPadding = 10
-        Me.btnDeleteSubject.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.btnDeleteSubject.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnDeleteSubject.IdleBorderRadius = 1
-        Me.btnDeleteSubject.IdleBorderThickness = 0
-        Me.btnDeleteSubject.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnDeleteSubject.IdleIconLeftImage = Nothing
-        Me.btnDeleteSubject.IdleIconRightImage = Nothing
-        Me.btnDeleteSubject.Location = New System.Drawing.Point(12, 698)
-        Me.btnDeleteSubject.Name = "btnDeleteSubject"
-        StateProperties30.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties30.BorderRadius = 1
-        StateProperties30.BorderThickness = 1
-        StateProperties30.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties30.IconLeftImage = Nothing
-        StateProperties30.IconRightImage = Nothing
-        Me.btnDeleteSubject.onHoverState = StateProperties30
-        Me.btnDeleteSubject.Size = New System.Drawing.Size(192, 30)
-        Me.btnDeleteSubject.TabIndex = 40
-        Me.btnDeleteSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnMaximize
-        '
-        Me.btnMaximize.BackColor = System.Drawing.Color.Transparent
-        Me.btnMaximize.BackgroundImage = Global.HACDOGS.My.Resources.Resources.full2
-        Me.btnMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMaximize.Location = New System.Drawing.Point(60, 6)
-        Me.btnMaximize.Name = "btnMaximize"
-        Me.btnMaximize.Size = New System.Drawing.Size(18, 18)
-        Me.btnMaximize.TabIndex = 38
-        Me.btnMaximize.TabStop = False
-        '
-        'minimizeButton
-        '
-        Me.minimizeButton.BackColor = System.Drawing.Color.Transparent
-        Me.minimizeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.min2
-        Me.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.minimizeButton.Location = New System.Drawing.Point(36, 6)
-        Me.minimizeButton.Name = "minimizeButton"
-        Me.minimizeButton.Size = New System.Drawing.Size(18, 18)
-        Me.minimizeButton.TabIndex = 36
-        Me.minimizeButton.TabStop = False
-        '
-        'closeButton
-        '
-        Me.closeButton.BackColor = System.Drawing.Color.Transparent
-        Me.closeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.x21
-        Me.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.closeButton.Location = New System.Drawing.Point(12, 6)
-        Me.closeButton.Name = "closeButton"
-        Me.closeButton.Size = New System.Drawing.Size(18, 18)
-        Me.closeButton.TabIndex = 35
-        Me.closeButton.TabStop = False
         '
         'lblSubjectName
         '
@@ -365,7 +197,7 @@ Partial Class mainForm
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(228, 75)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(784, 200)
+        Me.ListView1.Size = New System.Drawing.Size(509, 200)
         Me.ListView1.TabIndex = 46
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -379,7 +211,7 @@ Partial Class mainForm
         '
         Me.ColumnHeader2.Text = "Exam Name"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 401
+        Me.ColumnHeader2.Width = 140
         '
         'ColumnHeader9
         '
@@ -401,7 +233,8 @@ Partial Class mainForm
         '
         'ListView2
         '
-        Me.ListView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ListView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader10, Me.ColumnHeader11})
         Me.ListView2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -471,9 +304,138 @@ Partial Class mainForm
         Me.Label4.Text = "Questions in"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("SansSerif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Label3.Location = New System.Drawing.Point(355, 706)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(204, 19)
+        Me.Label3.TabIndex = 53
+        Me.Label3.Text = "Number of Sets to Produce:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtNumberOfSets
+        '
+        Me.txtNumberOfSets.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.txtNumberOfSets.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNumberOfSets.Location = New System.Drawing.Point(562, 702)
+        Me.txtNumberOfSets.MaxLength = 2
+        Me.txtNumberOfSets.Name = "txtNumberOfSets"
+        Me.txtNumberOfSets.Size = New System.Drawing.Size(46, 26)
+        Me.txtNumberOfSets.TabIndex = 54
+        Me.txtNumberOfSets.Text = "1"
+        Me.txtNumberOfSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ListView3
+        '
+        Me.ListView3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader12, Me.ColumnHeader13})
+        Me.ListView3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView3.FullRowSelect = True
+        Me.ListView3.HideSelection = False
+        Me.ListView3.Location = New System.Drawing.Point(757, 75)
+        Me.ListView3.Name = "ListView3"
+        Me.ListView3.Size = New System.Drawing.Size(255, 200)
+        Me.ListView3.TabIndex = 56
+        Me.ListView3.UseCompatibleStateImageBehavior = False
+        Me.ListView3.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader12
+        '
+        Me.ColumnHeader12.Text = "No."
+        Me.ColumnHeader12.Width = 47
+        '
+        'ColumnHeader13
+        '
+        Me.ColumnHeader13.Text = "Set Alias"
+        Me.ColumnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader13.Width = 215
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Impact", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(752, 46)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(98, 26)
+        Me.Label5.TabIndex = 58
+        Me.Label5.Text = "Exam Sets"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'btnAnswerKey
+        '
+        Me.btnAnswerKey.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAnswerKey.BackColor = System.Drawing.Color.Transparent
+        Me.btnAnswerKey.BackgroundImage = CType(resources.GetObject("btnAnswerKey.BackgroundImage"), System.Drawing.Image)
+        Me.btnAnswerKey.ButtonText = "View Answer Key"
+        Me.btnAnswerKey.ButtonTextMarginLeft = 0
+        Me.btnAnswerKey.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.btnAnswerKey.DisabledFillColor = System.Drawing.Color.Gray
+        Me.btnAnswerKey.DisabledForecolor = System.Drawing.Color.White
+        Me.btnAnswerKey.ForeColor = System.Drawing.Color.White
+        Me.btnAnswerKey.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.btnAnswerKey.IconPadding = 10
+        Me.btnAnswerKey.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.btnAnswerKey.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnAnswerKey.IdleBorderRadius = 1
+        Me.btnAnswerKey.IdleBorderThickness = 0
+        Me.btnAnswerKey.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnAnswerKey.IdleIconLeftImage = Nothing
+        Me.btnAnswerKey.IdleIconRightImage = Nothing
+        Me.btnAnswerKey.Location = New System.Drawing.Point(888, 281)
+        Me.btnAnswerKey.Name = "btnAnswerKey"
+        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties1.BorderRadius = 1
+        StateProperties1.BorderThickness = 1
+        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties1.IconLeftImage = Nothing
+        StateProperties1.IconRightImage = Nothing
+        Me.btnAnswerKey.onHoverState = StateProperties1
+        Me.btnAnswerKey.Size = New System.Drawing.Size(124, 30)
+        Me.btnAnswerKey.TabIndex = 60
+        Me.btnAnswerKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnWord
+        '
+        Me.btnWord.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnWord.BackColor = System.Drawing.Color.Transparent
+        Me.btnWord.BackgroundImage = CType(resources.GetObject("btnWord.BackgroundImage"), System.Drawing.Image)
+        Me.btnWord.ButtonText = "View in MS Word "
+        Me.btnWord.ButtonTextMarginLeft = 0
+        Me.btnWord.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.btnWord.DisabledFillColor = System.Drawing.Color.Gray
+        Me.btnWord.DisabledForecolor = System.Drawing.Color.White
+        Me.btnWord.ForeColor = System.Drawing.Color.White
+        Me.btnWord.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.btnWord.IconPadding = 10
+        Me.btnWord.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.btnWord.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnWord.IdleBorderRadius = 1
+        Me.btnWord.IdleBorderThickness = 0
+        Me.btnWord.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnWord.IdleIconLeftImage = Nothing
+        Me.btnWord.IdleIconRightImage = Nothing
+        Me.btnWord.Location = New System.Drawing.Point(757, 281)
+        Me.btnWord.Name = "btnWord"
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.BorderRadius = 1
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.btnWord.onHoverState = StateProperties2
+        Me.btnWord.Size = New System.Drawing.Size(124, 30)
+        Me.btnWord.TabIndex = 59
+        Me.btnWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'BunifuButton4
         '
-        Me.BunifuButton4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BunifuButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.BunifuButton4.BackColor = System.Drawing.Color.Transparent
         Me.BunifuButton4.BackgroundImage = CType(resources.GetObject("BunifuButton4.BackgroundImage"), System.Drawing.Image)
         Me.BunifuButton4.ButtonText = "Create Sets of Exams"
@@ -494,20 +456,20 @@ Partial Class mainForm
         Me.BunifuButton4.IdleIconRightImage = Nothing
         Me.BunifuButton4.Location = New System.Drawing.Point(614, 700)
         Me.BunifuButton4.Name = "BunifuButton4"
-        StateProperties21.BorderColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties21.BorderRadius = 1
-        StateProperties21.BorderThickness = 1
-        StateProperties21.FillColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
-        StateProperties21.IconLeftImage = Nothing
-        StateProperties21.IconRightImage = Nothing
-        Me.BunifuButton4.onHoverState = StateProperties21
+        StateProperties3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties3.BorderRadius = 1
+        StateProperties3.BorderThickness = 1
+        StateProperties3.FillColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
+        StateProperties3.IconLeftImage = Nothing
+        StateProperties3.IconRightImage = Nothing
+        Me.BunifuButton4.onHoverState = StateProperties3
         Me.BunifuButton4.Size = New System.Drawing.Size(192, 30)
         Me.BunifuButton4.TabIndex = 55
         Me.BunifuButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BunifuButton1
         '
-        Me.BunifuButton1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BunifuButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.BunifuButton1.BackColor = System.Drawing.Color.Transparent
         Me.BunifuButton1.BackgroundImage = CType(resources.GetObject("BunifuButton1.BackgroundImage"), System.Drawing.Image)
         Me.BunifuButton1.ButtonText = "Edit Question"
@@ -527,20 +489,20 @@ Partial Class mainForm
         Me.BunifuButton1.IdleIconRightImage = Nothing
         Me.BunifuButton1.Location = New System.Drawing.Point(510, 662)
         Me.BunifuButton1.Name = "BunifuButton1"
-        StateProperties22.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties22.BorderRadius = 1
-        StateProperties22.BorderThickness = 1
-        StateProperties22.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties22.IconLeftImage = Nothing
-        StateProperties22.IconRightImage = Nothing
-        Me.BunifuButton1.onHoverState = StateProperties22
+        StateProperties4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties4.BorderRadius = 1
+        StateProperties4.BorderThickness = 1
+        StateProperties4.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties4.IconLeftImage = Nothing
+        StateProperties4.IconRightImage = Nothing
+        Me.BunifuButton1.onHoverState = StateProperties4
         Me.BunifuButton1.Size = New System.Drawing.Size(192, 30)
         Me.BunifuButton1.TabIndex = 51
         Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BunifuButton2
         '
-        Me.BunifuButton2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BunifuButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.BunifuButton2.BackColor = System.Drawing.Color.Transparent
         Me.BunifuButton2.BackgroundImage = CType(resources.GetObject("BunifuButton2.BackgroundImage"), System.Drawing.Image)
         Me.BunifuButton2.ButtonText = "Add Question"
@@ -560,20 +522,20 @@ Partial Class mainForm
         Me.BunifuButton2.IdleIconRightImage = Nothing
         Me.BunifuButton2.Location = New System.Drawing.Point(312, 662)
         Me.BunifuButton2.Name = "BunifuButton2"
-        StateProperties23.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties23.BorderRadius = 1
-        StateProperties23.BorderThickness = 1
-        StateProperties23.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties23.IconLeftImage = Nothing
-        StateProperties23.IconRightImage = Nothing
-        Me.BunifuButton2.onHoverState = StateProperties23
+        StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties5.BorderRadius = 1
+        StateProperties5.BorderThickness = 1
+        StateProperties5.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties5.IconLeftImage = Nothing
+        StateProperties5.IconRightImage = Nothing
+        Me.BunifuButton2.onHoverState = StateProperties5
         Me.BunifuButton2.Size = New System.Drawing.Size(192, 30)
         Me.BunifuButton2.TabIndex = 50
         Me.BunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BunifuButton3
         '
-        Me.BunifuButton3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BunifuButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.BunifuButton3.BackColor = System.Drawing.Color.Transparent
         Me.BunifuButton3.BackgroundImage = CType(resources.GetObject("BunifuButton3.BackgroundImage"), System.Drawing.Image)
         Me.BunifuButton3.ButtonText = "Delete Question"
@@ -593,13 +555,13 @@ Partial Class mainForm
         Me.BunifuButton3.IdleIconRightImage = Nothing
         Me.BunifuButton3.Location = New System.Drawing.Point(708, 662)
         Me.BunifuButton3.Name = "BunifuButton3"
-        StateProperties24.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties24.BorderRadius = 1
-        StateProperties24.BorderThickness = 1
-        StateProperties24.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties24.IconLeftImage = Nothing
-        StateProperties24.IconRightImage = Nothing
-        Me.BunifuButton3.onHoverState = StateProperties24
+        StateProperties6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties6.BorderRadius = 1
+        StateProperties6.BorderThickness = 1
+        StateProperties6.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties6.IconLeftImage = Nothing
+        StateProperties6.IconRightImage = Nothing
+        Me.BunifuButton3.onHoverState = StateProperties6
         Me.BunifuButton3.Size = New System.Drawing.Size(192, 30)
         Me.BunifuButton3.TabIndex = 49
         Me.BunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -624,21 +586,22 @@ Partial Class mainForm
         Me.btnEditExam.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.btnEditExam.IdleIconLeftImage = Nothing
         Me.btnEditExam.IdleIconRightImage = Nothing
-        Me.btnEditExam.Location = New System.Drawing.Point(510, 281)
+        Me.btnEditExam.Location = New System.Drawing.Point(401, 281)
         Me.btnEditExam.Name = "btnEditExam"
-        StateProperties25.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties25.BorderRadius = 1
-        StateProperties25.BorderThickness = 1
-        StateProperties25.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties25.IconLeftImage = Nothing
-        StateProperties25.IconRightImage = Nothing
-        Me.btnEditExam.onHoverState = StateProperties25
-        Me.btnEditExam.Size = New System.Drawing.Size(192, 30)
+        StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties7.BorderRadius = 1
+        StateProperties7.BorderThickness = 1
+        StateProperties7.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties7.IconLeftImage = Nothing
+        StateProperties7.IconRightImage = Nothing
+        Me.btnEditExam.onHoverState = StateProperties7
+        Me.btnEditExam.Size = New System.Drawing.Size(160, 30)
         Me.btnEditExam.TabIndex = 47
         Me.btnEditExam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnAddExam
         '
+        Me.btnAddExam.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnAddExam.BackColor = System.Drawing.Color.Transparent
         Me.btnAddExam.BackgroundImage = CType(resources.GetObject("btnAddExam.BackgroundImage"), System.Drawing.Image)
         Me.btnAddExam.ButtonText = "Add Examination"
@@ -656,22 +619,22 @@ Partial Class mainForm
         Me.btnAddExam.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.btnAddExam.IdleIconLeftImage = Nothing
         Me.btnAddExam.IdleIconRightImage = Nothing
-        Me.btnAddExam.Location = New System.Drawing.Point(312, 281)
+        Me.btnAddExam.Location = New System.Drawing.Point(235, 281)
         Me.btnAddExam.Name = "btnAddExam"
-        StateProperties26.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties26.BorderRadius = 1
-        StateProperties26.BorderThickness = 1
-        StateProperties26.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties26.IconLeftImage = Nothing
-        StateProperties26.IconRightImage = Nothing
-        Me.btnAddExam.onHoverState = StateProperties26
-        Me.btnAddExam.Size = New System.Drawing.Size(192, 30)
+        StateProperties8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties8.BorderRadius = 1
+        StateProperties8.BorderThickness = 1
+        StateProperties8.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties8.IconLeftImage = Nothing
+        StateProperties8.IconRightImage = Nothing
+        Me.btnAddExam.onHoverState = StateProperties8
+        Me.btnAddExam.Size = New System.Drawing.Size(160, 30)
         Me.btnAddExam.TabIndex = 43
         Me.btnAddExam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnDeleteExam
         '
-        Me.btnDeleteExam.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnDeleteExam.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnDeleteExam.BackColor = System.Drawing.Color.Transparent
         Me.btnDeleteExam.BackgroundImage = CType(resources.GetObject("btnDeleteExam.BackgroundImage"), System.Drawing.Image)
         Me.btnDeleteExam.ButtonText = "Delete Examination"
@@ -689,42 +652,194 @@ Partial Class mainForm
         Me.btnDeleteExam.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.btnDeleteExam.IdleIconLeftImage = Nothing
         Me.btnDeleteExam.IdleIconRightImage = Nothing
-        Me.btnDeleteExam.Location = New System.Drawing.Point(708, 281)
+        Me.btnDeleteExam.Location = New System.Drawing.Point(567, 281)
         Me.btnDeleteExam.Name = "btnDeleteExam"
-        StateProperties27.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties27.BorderRadius = 1
-        StateProperties27.BorderThickness = 1
-        StateProperties27.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties27.IconLeftImage = Nothing
-        StateProperties27.IconRightImage = Nothing
-        Me.btnDeleteExam.onHoverState = StateProperties27
-        Me.btnDeleteExam.Size = New System.Drawing.Size(192, 30)
+        StateProperties9.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties9.BorderRadius = 1
+        StateProperties9.BorderThickness = 1
+        StateProperties9.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties9.IconLeftImage = Nothing
+        StateProperties9.IconRightImage = Nothing
+        Me.btnDeleteExam.onHoverState = StateProperties9
+        Me.btnDeleteExam.Size = New System.Drawing.Size(160, 30)
         Me.btnDeleteExam.TabIndex = 42
         Me.btnDeleteExam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label3
+        'btnLogout
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("SansSerif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Label3.Location = New System.Drawing.Point(355, 709)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(3, 0, 0, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(204, 19)
-        Me.Label3.TabIndex = 53
-        Me.Label3.Text = "Number of Sets to Produce:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLogout.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogout.BackgroundImage = CType(resources.GetObject("btnLogout.BackgroundImage"), System.Drawing.Image)
+        Me.btnLogout.ButtonText = "Log-out"
+        Me.btnLogout.ButtonTextMarginLeft = 0
+        Me.btnLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.btnLogout.DisabledFillColor = System.Drawing.Color.Gray
+        Me.btnLogout.DisabledForecolor = System.Drawing.Color.White
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.btnLogout.IconPadding = 10
+        Me.btnLogout.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.btnLogout.IdleBorderColor = System.Drawing.Color.Firebrick
+        Me.btnLogout.IdleBorderRadius = 1
+        Me.btnLogout.IdleBorderThickness = 0
+        Me.btnLogout.IdleFillColor = System.Drawing.Color.Firebrick
+        Me.btnLogout.IdleIconLeftImage = Nothing
+        Me.btnLogout.IdleIconRightImage = Nothing
+        Me.btnLogout.Location = New System.Drawing.Point(712, 7)
+        Me.btnLogout.Name = "btnLogout"
+        StateProperties10.BorderColor = System.Drawing.Color.DarkRed
+        StateProperties10.BorderRadius = 1
+        StateProperties10.BorderThickness = 0
+        StateProperties10.FillColor = System.Drawing.Color.DarkRed
+        StateProperties10.IconLeftImage = Nothing
+        StateProperties10.IconRightImage = Nothing
+        Me.btnLogout.onHoverState = StateProperties10
+        Me.btnLogout.Size = New System.Drawing.Size(83, 20)
+        Me.btnLogout.TabIndex = 42
+        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'txtNumberOfSets
+        'txtAddSubject
         '
-        Me.txtNumberOfSets.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumberOfSets.Location = New System.Drawing.Point(562, 705)
-        Me.txtNumberOfSets.MaxLength = 2
-        Me.txtNumberOfSets.Name = "txtNumberOfSets"
-        Me.txtNumberOfSets.Size = New System.Drawing.Size(46, 26)
-        Me.txtNumberOfSets.TabIndex = 54
-        Me.txtNumberOfSets.Text = "1"
-        Me.txtNumberOfSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtAddSubject.AcceptsReturn = False
+        Me.txtAddSubject.AcceptsTab = False
+        Me.txtAddSubject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtAddSubject.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
+        Me.txtAddSubject.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
+        Me.txtAddSubject.BackColor = System.Drawing.Color.Transparent
+        Me.txtAddSubject.BackgroundImage = CType(resources.GetObject("txtAddSubject.BackgroundImage"), System.Drawing.Image)
+        Me.txtAddSubject.BorderColorActive = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.txtAddSubject.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.txtAddSubject.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(157, Byte), Integer))
+        Me.txtAddSubject.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.txtAddSubject.BorderRadius = 1
+        Me.txtAddSubject.BorderThickness = 2
+        Me.txtAddSubject.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.txtAddSubject.DefaultFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddSubject.DefaultText = ""
+        Me.txtAddSubject.FillColor = System.Drawing.Color.White
+        Me.txtAddSubject.HideSelection = True
+        Me.txtAddSubject.IconLeft = Nothing
+        Me.txtAddSubject.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.txtAddSubject.IconPadding = 10
+        Me.txtAddSubject.IconRight = Nothing
+        Me.txtAddSubject.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.txtAddSubject.Location = New System.Drawing.Point(12, 622)
+        Me.txtAddSubject.MaxLength = 32767
+        Me.txtAddSubject.MinimumSize = New System.Drawing.Size(100, 35)
+        Me.txtAddSubject.Modified = False
+        Me.txtAddSubject.Name = "txtAddSubject"
+        Me.txtAddSubject.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtAddSubject.ReadOnly = False
+        Me.txtAddSubject.SelectedText = ""
+        Me.txtAddSubject.SelectionLength = 0
+        Me.txtAddSubject.SelectionStart = 0
+        Me.txtAddSubject.ShortcutsEnabled = True
+        Me.txtAddSubject.Size = New System.Drawing.Size(196, 35)
+        Me.txtAddSubject.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
+        Me.txtAddSubject.TabIndex = 42
+        Me.txtAddSubject.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtAddSubject.TextMarginLeft = 5
+        Me.txtAddSubject.TextPlaceholder = ""
+        Me.txtAddSubject.UseSystemPasswordChar = False
+        '
+        'btnAddSubject
+        '
+        Me.btnAddSubject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAddSubject.BackColor = System.Drawing.Color.Transparent
+        Me.btnAddSubject.BackgroundImage = CType(resources.GetObject("btnAddSubject.BackgroundImage"), System.Drawing.Image)
+        Me.btnAddSubject.ButtonText = "Add Subject"
+        Me.btnAddSubject.ButtonTextMarginLeft = 0
+        Me.btnAddSubject.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.btnAddSubject.DisabledFillColor = System.Drawing.Color.Gray
+        Me.btnAddSubject.DisabledForecolor = System.Drawing.Color.White
+        Me.btnAddSubject.ForeColor = System.Drawing.Color.White
+        Me.btnAddSubject.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.btnAddSubject.IconPadding = 10
+        Me.btnAddSubject.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.btnAddSubject.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnAddSubject.IdleBorderRadius = 1
+        Me.btnAddSubject.IdleBorderThickness = 0
+        Me.btnAddSubject.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnAddSubject.IdleIconLeftImage = Nothing
+        Me.btnAddSubject.IdleIconRightImage = Nothing
+        Me.btnAddSubject.Location = New System.Drawing.Point(12, 662)
+        Me.btnAddSubject.Name = "btnAddSubject"
+        StateProperties11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties11.BorderRadius = 1
+        StateProperties11.BorderThickness = 1
+        StateProperties11.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties11.IconLeftImage = Nothing
+        StateProperties11.IconRightImage = Nothing
+        Me.btnAddSubject.onHoverState = StateProperties11
+        Me.btnAddSubject.Size = New System.Drawing.Size(192, 30)
+        Me.btnAddSubject.TabIndex = 41
+        Me.btnAddSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnDeleteSubject
+        '
+        Me.btnDeleteSubject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnDeleteSubject.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteSubject.BackgroundImage = CType(resources.GetObject("btnDeleteSubject.BackgroundImage"), System.Drawing.Image)
+        Me.btnDeleteSubject.ButtonText = "Delete Subject"
+        Me.btnDeleteSubject.ButtonTextMarginLeft = 0
+        Me.btnDeleteSubject.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.btnDeleteSubject.DisabledFillColor = System.Drawing.Color.Gray
+        Me.btnDeleteSubject.DisabledForecolor = System.Drawing.Color.White
+        Me.btnDeleteSubject.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteSubject.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.btnDeleteSubject.IconPadding = 10
+        Me.btnDeleteSubject.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.btnDeleteSubject.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnDeleteSubject.IdleBorderRadius = 1
+        Me.btnDeleteSubject.IdleBorderThickness = 0
+        Me.btnDeleteSubject.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnDeleteSubject.IdleIconLeftImage = Nothing
+        Me.btnDeleteSubject.IdleIconRightImage = Nothing
+        Me.btnDeleteSubject.Location = New System.Drawing.Point(12, 698)
+        Me.btnDeleteSubject.Name = "btnDeleteSubject"
+        StateProperties12.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties12.BorderRadius = 1
+        StateProperties12.BorderThickness = 1
+        StateProperties12.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties12.IconLeftImage = Nothing
+        StateProperties12.IconRightImage = Nothing
+        Me.btnDeleteSubject.onHoverState = StateProperties12
+        Me.btnDeleteSubject.Size = New System.Drawing.Size(192, 30)
+        Me.btnDeleteSubject.TabIndex = 40
+        Me.btnDeleteSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnMaximize
+        '
+        Me.btnMaximize.BackColor = System.Drawing.Color.Transparent
+        Me.btnMaximize.BackgroundImage = Global.HACDOGS.My.Resources.Resources.full2
+        Me.btnMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMaximize.Location = New System.Drawing.Point(60, 6)
+        Me.btnMaximize.Name = "btnMaximize"
+        Me.btnMaximize.Size = New System.Drawing.Size(18, 18)
+        Me.btnMaximize.TabIndex = 38
+        Me.btnMaximize.TabStop = False
+        '
+        'minimizeButton
+        '
+        Me.minimizeButton.BackColor = System.Drawing.Color.Transparent
+        Me.minimizeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.min2
+        Me.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.minimizeButton.Location = New System.Drawing.Point(36, 6)
+        Me.minimizeButton.Name = "minimizeButton"
+        Me.minimizeButton.Size = New System.Drawing.Size(18, 18)
+        Me.minimizeButton.TabIndex = 36
+        Me.minimizeButton.TabStop = False
+        '
+        'closeButton
+        '
+        Me.closeButton.BackColor = System.Drawing.Color.Transparent
+        Me.closeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.x21
+        Me.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.closeButton.Location = New System.Drawing.Point(12, 6)
+        Me.closeButton.Name = "closeButton"
+        Me.closeButton.Size = New System.Drawing.Size(18, 18)
+        Me.closeButton.TabIndex = 35
+        Me.closeButton.TabStop = False
         '
         'mainForm
         '
@@ -732,6 +847,10 @@ Partial Class mainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1024, 740)
+        Me.Controls.Add(Me.btnAnswerKey)
+        Me.Controls.Add(Me.btnWord)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.ListView3)
         Me.Controls.Add(Me.txtNumberOfSets)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BunifuButton4)
@@ -806,4 +925,10 @@ Partial Class mainForm
     Friend WithEvents ColumnHeader11 As ColumnHeader
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNumberOfSets As TextBox
+    Friend WithEvents ListView3 As ListView
+    Friend WithEvents ColumnHeader12 As ColumnHeader
+    Friend WithEvents ColumnHeader13 As ColumnHeader
+    Friend WithEvents btnWord As Bunifu.UI.WinForms.BunifuButton.BunifuButton
+    Friend WithEvents Label5 As Label
+    Friend WithEvents btnAnswerKey As Bunifu.UI.WinForms.BunifuButton.BunifuButton
 End Class
