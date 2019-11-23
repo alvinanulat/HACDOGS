@@ -75,7 +75,6 @@ C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbproj
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.exe
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.xml
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbprojResolveAssemblyReference.cache
-C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.Form1.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.mainForm.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.Resources.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.registerForm.resources
@@ -122,3 +121,7 @@ C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu_UI_v1.5
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.AddExaminationForm.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.AddQuestionsForm.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.SetForm.resources
+C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\EntityFramework.dll
+C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\EntityFramework.xml
