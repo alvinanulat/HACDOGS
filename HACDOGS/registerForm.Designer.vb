@@ -80,7 +80,7 @@ Partial Class registerForm
         '
         'closeButton
         '
-        Me.closeButton.BackColor = System.Drawing.Color.Red
+        Me.closeButton.BackColor = System.Drawing.Color.Transparent
         Me.closeButton.BackgroundImage = Global.HACDOGS.My.Resources.Resources.x21
         Me.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.closeButton.Location = New System.Drawing.Point(12, 5)

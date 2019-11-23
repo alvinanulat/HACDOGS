@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SQLite
 Imports System.Text.RegularExpressions
+Imports Word = Microsoft.Office.Interop.Word
+
 
 Public Class mainForm
-    'Dim locphotos As String = Environment.CurrentDirectory & "\data\photos\"
-
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
@@ -428,30 +428,98 @@ Public Class mainForm
     End Sub
 
     Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles btnGenerator.Click
-        If examId <> "" Then
+        Dim objWordApp As New Word.Application
+        objWordApp.Visible = True
 
-            Try
-                Dim q As Integer = 20
-                For i As Integer = 1 To q
-                    Dim cmdString As String = "insert into tbl_questions values(null,
-                    'multiple',
-                    'This is the content of question number " & i & ".',
-                    '" & examId & "',
-                    'Correct answer to question number " & i & "',
-                    'First wrong answer to question number " & i & "',
-                    'Second wrong answer to question number " & i & "',
-                    'Third wrong answer to question number " & i & "');"
-                    Dim cmd As New SQLiteCommand(cmdString, con)
-                    cmd.ExecuteNonQuery()
-                    cmd.Dispose()
-                Next
+        'Open an existing document.  
+        Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx")
+        objDoc = objWordApp.ActiveDocument
 
-                MessageBox.Show(q & "questions created!")
+        'Dim cmdString As String = "select questions, answers, set_alias from tbl_sets where set_id='" & setId & "';"
+        'Dim cmd As SQLiteCommand = New SQLiteCommand(cmdString, con)
+        'Dim dr As SQLiteDataReader
+        'dr = cmd.ExecuteReader()
+        'Dim answers As String = ""
+        'Dim questions As String = ""
+        'While dr.Read()
+        '    questions = dr.GetString(0)
+        '    MessageBox.Show(questions)
+        '    answers = dr.GetString(1)
+        '    MessageBox.Show(answers)
+        '    ' lblSetAlias.Text = dr.GetString(2)
+        'End While
+        'dr.Close()
+        Dim cmdString As String = "select exam_name,academic_year,semester from tbl_exams where exam_id = (select exam_id from tbl_sets where tbl_sets.set_id='" & setId & "');"
+        MsgBox(cmdString)
+        Dim cmd As SQLiteCommand = New SQLiteCommand(cmdString, con)
+        Dim dr As SQLiteDataReader
+        dr = cmd.ExecuteReader()
+        'Dim answers As String = ""
+        Dim sem As String = ""
+        Dim acadyear As String = ""
+        Dim exam As String = ""
+        Dim section As String = ""
+        While dr.Read()
+            exam = dr.GetString(0)
+            acadyear = dr.GetString(1)
+            sem = dr.GetString(2)
+            ' MessageBox.Show(sem)
+        End While
+        dr.Close()
 
-            Catch ex As Exception
-                MessageBox.Show(ex.ToString)
-            End Try
-        End If
+        cmdString = "select subject_name from tbl_subjects where subject_id=(select subject_id from tbl_exams where exam_id = (select exam_id from tbl_sets where tbl_sets.set_id='" & setId & "'));"
+        MsgBox(cmdString)
+        cmd = New SQLiteCommand(cmdString, con)
+        dr = cmd.ExecuteReader()
+        Dim subject As String = ""
+        While dr.Read()
+            subject = dr.GetString(0)
+            ' MessageBox.Show(sem)
+        End While
+        dr.Close()
+        'Find and replace some text  
+        'Replace 'VB' with 'Visual Basic'  
+        objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
+        objDoc.Content.Find.Execute(FindText:="$acadyear$", ReplaceWith:=acadyear, Replace:=Word.WdReplace.wdReplaceAll)
+        objDoc.Content.Find.Execute(FindText:="$exam$", ReplaceWith:=exam, Replace:=Word.WdReplace.wdReplaceAll)
+        objDoc.Content.Find.Execute(FindText:="$subject$", ReplaceWith:=subject, Replace:=Word.WdReplace.wdReplaceAll)
+        'objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
+        While objDoc.Content.Find.Execute(FindText:="  ", Wrap:=Word.WdFindWrap.wdFindContinue)
+            objDoc.Content.Find.Execute(FindText:="  ", ReplaceWith:=" ", Replace:=Word.WdReplace.wdReplaceAll, Wrap:=Word.WdFindWrap.wdFindContinue)
+        End While
+
+        'Save And Close() the document  
+        'objDoc.Save()
+        'objDoc.Close()
+        'objDoc = Nothing
+        'objWordApp.Quit()
+        'objWordApp = Nothing
+
+
+        'If examId <> "" Then
+
+        '    Try
+        '        Dim q As Integer = 20
+        '        For i As Integer = 1 To q
+        '            Dim cmdString As String = "insert into tbl_questions values(null,
+        '            'multiple',
+        '            'This is the content of question number " & i & ".',
+        '            '" & examId & "',
+        '            'Correct answer to question number " & i & "',
+        '            'First wrong answer to question number " & i & "',
+        '            'Second wrong answer to question number " & i & "',
+        '            'Third wrong answer to question number " & i & "');"
+        '            Dim cmd As New SQLiteCommand(cmdString, con)
+        '            cmd.ExecuteNonQuery()
+        '            cmd.Dispose()
+        '        Next
+
+        '        MessageBox.Show(q & "questions created!")
+
+        '    Catch ex As Exception
+        '        MessageBox.Show(ex.ToString)
+        '    End Try
+        'End If
     End Sub
 
     Private Sub BunifuButton6_Click(sender As Object, e As EventArgs) Handles btnAnswerKey.Click
@@ -465,6 +533,10 @@ Public Class mainForm
     Private Sub ListView3_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView3.MouseClick
         'lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
         setId = ListView3.SelectedItems(0).Tag
+
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
 
     End Sub
 End Class
