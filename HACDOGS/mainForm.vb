@@ -210,8 +210,6 @@ Public Class mainForm
     End Sub
 
     Private Function subjectButtonsHandler(ByVal subject As String, ByVal subjectName As String) As String
-        lblSubjectName.Text = subjectName
-        subjectId = subject
         If isDeletingSubject Then
             Dim deleteYN As System.Windows.Forms.DialogResult
             deleteYN = MsgBox("Do you really want to delete the subject?", MsgBoxStyle.YesNo)
@@ -230,7 +228,10 @@ Public Class mainForm
                 End Try
             End If
         Else
+            subjectId = subject
+
             refreshExams()
+            lblSubjectName.Text = subjectName
 
         End If
 
