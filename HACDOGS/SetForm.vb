@@ -62,9 +62,9 @@ Public Class SetForm
         Dim questions As String = ""
         While dr.Read()
             questions = dr.GetString(0)
-            MessageBox.Show(questions)
+            'MessageBox.Show(questions)
             answers = dr.GetString(1)
-            MessageBox.Show(answers)
+            'MessageBox.Show(answers)
             lblSetAlias.Text = dr.GetString(2)
         End While
         dr.Close()
@@ -78,16 +78,38 @@ Public Class SetForm
             lvi = New ListViewItem()
             lvi.Text = i + 1
 
-            cmdString = "select question_content from tbl_questions where question_id=" & temp & ";"
+            cmdString = "select * from tbl_questions where question_id=" & temp & ";"
             cmd.CommandText = cmdString
-            lvi.SubItems.Add(cmd.ExecuteScalar().ToString())
-
-            lvi.SubItems.Add(map(answersList(i) - 1))
-
+            dr = cmd.ExecuteReader()
+            While dr.Read
+                'lvi.SubItems.Add(cmd.ExecuteScalar().ToString())
+                lvi.SubItems.Add(dr.GetString(2))
+                lvi.SubItems.Add(map(answersList(i) - 1))
+                lvi.SubItems.Add(dr.GetString(4))
+                lvi.SubItems.Add(dr.GetString(5))
+                lvi.SubItems.Add(dr.GetString(6))
+                lvi.SubItems.Add(dr.GetString(7))
+            End While
+            dr.Close()
             ListView1.Items.Add(lvi)
             i += 1
         Next
         'MessageBox.Show(answersList.Count)
 
+        AutoResizeColumns(ListView1)
+    End Sub
+
+
+    Private Sub AutoResizeColumns(lv As ListView)
+        lv.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
+        Dim cc As ListView.ColumnHeaderCollection = lv.Columns
+        For i As Integer = 0 To cc.Count - 1
+
+            Dim colWidth As Integer = TextRenderer.MeasureText(cc(i).Text, lv.Font).Width + 10
+            If colWidth > cc(i).Width Then
+
+                cc(i).Width = colWidth
+            End If
+        Next
     End Sub
 End Class

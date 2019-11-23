@@ -127,10 +127,16 @@ Public Class registerForm
                 mainForm.userId = user_id
                 mainForm.username = username
                 mainForm.Show()
+
+
                 Me.Close()
                 Exit While
             End While
             dr.Close()
+
+            'con.Close()
+            'con.Dispose()
+            'cmd.Dispose()
 
             If (Not loggingIn) Then
                 MessageBox.Show("Username or password is incorrect.")

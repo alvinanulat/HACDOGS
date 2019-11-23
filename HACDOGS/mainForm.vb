@@ -1,4 +1,5 @@
-﻿Imports System.Data.SQLite
+﻿Imports System.ComponentModel
+Imports System.Data.SQLite
 Imports System.Text.RegularExpressions
 
 Public Class mainForm
@@ -26,6 +27,7 @@ Public Class mainForm
     Private subjectId As String
     Private examId As String
     Private setId As String
+    Private questionId As String
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, lblLoggedIn.MouseDown
         drag = True
         'Me.WindowState = FormWindowState.Normal
@@ -151,8 +153,13 @@ Public Class mainForm
         dr = cmd.ExecuteReader()
 
         ListView2.Items.Clear()
+        questionId = ""
+        lblExamName.Text = "Exam"
         ListView3.Items.Clear()
+        setId = ""
         ListView1.Items.Clear()
+        examId = ""
+        lblSubjectName.Text = "Subject"
         While dr.Read()
             lvi = New ListViewItem()
             lvi.Text = i
@@ -179,7 +186,9 @@ Public Class mainForm
             dr = cmd.ExecuteReader()
 
             ListView3.Items.Clear()
+            setId = ""
             ListView2.Items.Clear()
+            questionId = ""
             While dr.Read()
                 lvi = New ListViewItem
                 lvi.Text = i
@@ -212,6 +221,10 @@ Public Class mainForm
                     cmd = New SQLiteCommand(cmdString, con)
                     cmd.ExecuteNonQuery()
                     refreshSubjects()
+                    ListView1.Items.Clear()
+                    lblSubjectName.Text = "Subject"
+                    ListView2.Items.Clear()
+                    lblExamName.Text = "Exam"
                 Catch ex As Exception
                     MessageBox.Show(ex.ToString())
                 End Try
@@ -233,8 +246,8 @@ Public Class mainForm
             btnAddSubject.Enabled = False
         Else
             isDeletingSubject = False
-            btnDeleteSubject.IdleFillColor = Color.FromArgb(51, 122, 183)
-            btnDeleteSubject.IdleBorderColor = Color.FromArgb(51, 122, 183)
+            btnDeleteSubject.IdleFillColor = Color.FromArgb(254, 127, 74)
+            btnDeleteSubject.IdleBorderColor = Color.FromArgb(254, 127, 74)
             btnDeleteSubject.ButtonText = "Delete Subject"
             btnAddSubject.Enabled = True
         End If
@@ -393,6 +406,7 @@ Public Class mainForm
             dr = cmd.ExecuteReader()
 
             ListView3.Items.Clear()
+            setId = ""
             While dr.Read()
                 lvi = New ListViewItem
                 lvi.Text = i
@@ -466,5 +480,15 @@ Public Class mainForm
         'lblExamName.Text = ListView1.SelectedItems(0).SubItems.Item(1).Text
         setId = ListView3.SelectedItems(0).Tag
 
+    End Sub
+
+    Private Sub mainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        cmd.Dispose()
+        con.Close()
+        con.Dispose()
+    End Sub
+
+    Private Sub ListView2_Click(sender As Object, e As EventArgs) Handles ListView2.Click
+        questionId = ListView2.SelectedItems(0).Tag
     End Sub
 End Class

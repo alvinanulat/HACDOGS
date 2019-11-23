@@ -54,6 +54,7 @@ Public Class AddExaminationForm
             Dim cmd As SQLiteCommand
             cmd = New SQLiteCommand(cmdString, con)
             cmd.ExecuteNonQuery()
+            cmd.Dispose()
             Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)

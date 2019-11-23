@@ -117,19 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BunifuLabel5.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
-  </data>
   <data name="lblSetAlias.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHAAAAAdCAYAAAByiujPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABxSURBVGhD7dExDYAwAADB2gMVKGmlYJQAYcfAJzfc9OOP
-        a+3HvfaHnu/d+At0GBhnYJyBcQbGGRhnYJyBcQbGGRhnYJyBcQbGGRhnYJyBcQbGGRhnYJyBcQbGGRhn
-        YJyBcQbGGRhnYNy453b+BQLmdr68EDAo3pxY7AAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAIEAAAAdCAYAAACNBA9oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dIxFcAgAENB7IGKKgEpGOW1DTsOuOGmjPll
+        jfa8o33caf9fTgN3EQEiQASECBABIiBEgAgQASECRIAICBEgAkRAiAARIAJCBIgAERAiQASIgBABImBH
+        0Os8DVyi1/kD2n6HwZMrlIIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnWord.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIEAAAAdCAYAAACNBA9oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dIxFcAgAENB7IGKKgEpGOW1DTsOuOGmjPll
+        jfa8o33caf9fTgN3EQEiQASECBABIiBEgAgQASECRIAICBEgAkRAiAARIAJCBIgAERAiQASIgBABImBH
+        0Os8DVyi1/kD2n6HwZMrlIIAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

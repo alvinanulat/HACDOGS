@@ -35,7 +35,6 @@ C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\System.Data.SQ
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbprojAssemblyReference.cache
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbproj.ResolveComReference.cache
-C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.Form1.resources
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.mainForm.resources
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.Resources.resources
 C:\Users\buenl\source\repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.registerForm.resources
