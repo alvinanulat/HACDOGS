@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SQLite
 Imports System.Text.RegularExpressions
-Imports Word = Microsoft.Office.Interop.Word
+'Imports Word = Microsoft.Office.Interop.Word
 
 Public Class mainForm
     'Dim locphotos As String = Environment.CurrentDirectory & "\data\photos\"
@@ -444,14 +444,14 @@ Public Class mainForm
     End Sub
 
     Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles btnGenerator.Click
-        Dim objWordApp As New Word.Application
-        objWordApp.Visible = True
+        'Dim objWordApp As New Word.Application
+        'objWordApp.Visible = True
 
-        'Open an existing document.  
-        Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx")
-        objDoc = objWordApp.ActiveDocument
+        ''Open an existing document.  
+        'Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx")
+        'objDoc = objWordApp.ActiveDocument
 
-        'Dim cmdString As String = "select questions, answers, set_alias from tbl_sets where set_id='" & setId & "';"
+        Dim cmdString As String = "select questions, answers, set_alias from tbl_sets where set_id='" & setId & "';"
         'Dim cmd As SQLiteCommand = New SQLiteCommand(cmdString, con)
         'Dim dr As SQLiteDataReader
         'dr = cmd.ExecuteReader()
@@ -465,51 +465,51 @@ Public Class mainForm
         '    ' lblSetAlias.Text = dr.GetString(2)
         'End While
         'dr.Close()
-        Dim cmdString As String = "select exam_name,academic_year,semester from tbl_exams where exam_id = (select exam_id from tbl_sets where tbl_sets.set_id='" & setId & "');"
-        MsgBox(cmdString)
-        Dim cmd As SQLiteCommand = New SQLiteCommand(cmdString, con)
-        Dim dr As SQLiteDataReader
-        dr = cmd.ExecuteReader()
-        'Dim answers As String = ""
-        Dim sem As String = ""
-        Dim acadyear As String = ""
-        Dim exam As String = ""
-        Dim section As String = ""
-        While dr.Read()
-            exam = dr.GetString(0)
-            acadyear = dr.GetString(1)
-            sem = dr.GetString(2)
-            ' MessageBox.Show(sem)
-        End While
-        dr.Close()
+        'Dim cmdString As String = "select exam_name,academic_year,semester from tbl_exams where exam_id = (select exam_id from tbl_sets where tbl_sets.set_id='" & setId & "');"
+        'MsgBox(cmdString)
+        'Dim cmd As SQLiteCommand = New SQLiteCommand(cmdString, con)
+        'Dim dr As SQLiteDataReader
+        'dr = cmd.ExecuteReader()
+        ''Dim answers As String = ""
+        'Dim sem As String = ""
+        'Dim acadyear As String = ""
+        'Dim exam As String = ""
+        'Dim section As String = ""
+        'While dr.Read()
+        '    exam = dr.GetString(0)
+        '    acadyear = dr.GetString(1)
+        '    sem = dr.GetString(2)
+        '    ' MessageBox.Show(sem)
+        'End While
+        'dr.Close()
 
-        cmdString = "select subject_name from tbl_subjects where subject_id=(select subject_id from tbl_exams where exam_id = (select exam_id from tbl_sets where tbl_sets.set_id='" & setId & "'));"
-        MsgBox(cmdString)
-        cmd = New SQLiteCommand(cmdString, con)
-        dr = cmd.ExecuteReader()
-        Dim subject As String = ""
-        While dr.Read()
-            subject = dr.GetString(0)
-            ' MessageBox.Show(sem)
-        End While
-        dr.Close()
-        'Find and replace some text  
-        'Replace 'VB' with 'Visual Basic'  
-        objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
-        objDoc.Content.Find.Execute(FindText:="$acadyear$", ReplaceWith:=acadyear, Replace:=Word.WdReplace.wdReplaceAll)
-        objDoc.Content.Find.Execute(FindText:="$exam$", ReplaceWith:=exam, Replace:=Word.WdReplace.wdReplaceAll)
-        objDoc.Content.Find.Execute(FindText:="$subject$", ReplaceWith:=subject, Replace:=Word.WdReplace.wdReplaceAll)
+        'cmdString = "select subject_name from tbl_subjects where subject_id=(select subject_id from tbl_exams where exam_id = (select exam_id from tbl_sets where tbl_sets.set_id='" & setId & "'));"
+        'MsgBox(cmdString)
+        'cmd = New SQLiteCommand(cmdString, con)
+        'dr = cmd.ExecuteReader()
+        'Dim subject As String = ""
+        'While dr.Read()
+        '    subject = dr.GetString(0)
+        '    ' MessageBox.Show(sem)
+        'End While
+        'dr.Close()
+        ''Find and replace some text  
+        ''Replace 'VB' with 'Visual Basic'  
         'objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
-        While objDoc.Content.Find.Execute(FindText:="  ", Wrap:=Word.WdFindWrap.wdFindContinue)
-            objDoc.Content.Find.Execute(FindText:="  ", ReplaceWith:=" ", Replace:=Word.WdReplace.wdReplaceAll, Wrap:=Word.WdFindWrap.wdFindContinue)
-        End While
+        'objDoc.Content.Find.Execute(FindText:="$acadyear$", ReplaceWith:=acadyear, Replace:=Word.WdReplace.wdReplaceAll)
+        'objDoc.Content.Find.Execute(FindText:="$exam$", ReplaceWith:=exam, Replace:=Word.WdReplace.wdReplaceAll)
+        'objDoc.Content.Find.Execute(FindText:="$subject$", ReplaceWith:=subject, Replace:=Word.WdReplace.wdReplaceAll)
+        ''objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
+        'While objDoc.Content.Find.Execute(FindText:="  ", Wrap:=Word.WdFindWrap.wdFindContinue)
+        '    objDoc.Content.Find.Execute(FindText:="  ", ReplaceWith:=" ", Replace:=Word.WdReplace.wdReplaceAll, Wrap:=Word.WdFindWrap.wdFindContinue)
+        'End While
 
-        'Save And Close() the document  
-        'objDoc.Save()
-        'objDoc.Close()
-        'objDoc = Nothing
-        'objWordApp.Quit()
-        'objWordApp = Nothing
+        ''Save And Close() the document  
+        ''objDoc.Save()
+        ''objDoc.Close()
+        ''objDoc = Nothing
+        ''objWordApp.Quit()
+        ''objWordApp = Nothing
 
         If examId <> "" Then
 
