@@ -389,25 +389,25 @@ Partial Class mainForm
         '
         Me.ColumnHeader2.Text = "Exam Name"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 140
+        Me.ColumnHeader2.Width = 107
         '
         'ColumnHeader9
         '
         Me.ColumnHeader9.Text = "Total Items"
         Me.ColumnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader9.Width = 103
+        Me.ColumnHeader9.Width = 102
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Academic Year"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 131
+        Me.ColumnHeader3.Width = 120
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Semester"
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 81
+        Me.ColumnHeader4.Width = 84
         '
         'ListView2
         '
