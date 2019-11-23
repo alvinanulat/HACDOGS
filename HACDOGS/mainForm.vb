@@ -26,14 +26,14 @@ Public Class mainForm
     Private subjectId As String
     Private examId As String
     Private setId As String
-    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, lblLoggedIn.MouseDown
         drag = True
         'Me.WindowState = FormWindowState.Normal
         mousex = Cursor.Position.X - Me.Left
         mousey = Cursor.Position.Y - Me.Top
     End Sub
 
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove, lblLoggedIn.MouseMove
         If drag Then
 
             Me.Top = Cursor.Position.Y - mousey
@@ -43,7 +43,7 @@ Public Class mainForm
         End If
     End Sub
 
-    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp, lblLoggedIn.MouseUp
         drag = False
     End Sub
 
@@ -263,8 +263,12 @@ Public Class mainForm
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        registerForm.Show()
-        Me.Close()
+        Dim logout As System.Windows.Forms.DialogResult
+        logout = MsgBox("Do you really want to logout?", MsgBoxStyle.YesNo)
+        If logout = MsgBoxResult.Yes Then
+            registerForm.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub BunifuButton2_Click_1(sender As Object, e As EventArgs) Handles btnDeleteExam.Click
@@ -310,7 +314,7 @@ Public Class mainForm
 
     Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles BunifuButton4.Click
         Dim qList As List(Of String) = New List(Of String)
-        Dim aList As String = ""
+        Dim aList As String
 
         For Each lvi As ListViewItem In ListView2.Items
             qList.Add(lvi.Tag)
@@ -327,6 +331,7 @@ Public Class mainForm
         'MessageBox.Show(aList)
         For j As Integer = 1 To Integer.Parse(txtNumberOfSets.Text)
             Try
+                aList = ""
                 For i As Integer = 1 To qList.Count
                     aList &= rnd.Next(1, 4).ToString() & ","
                 Next
@@ -422,13 +427,39 @@ Public Class mainForm
 
     End Sub
 
-    Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles btnWord.Click
+    Private Sub BunifuButton5_Click(sender As Object, e As EventArgs) Handles btnGenerator.Click
+        If examId <> "" Then
 
+            Try
+                Dim q As Integer = 20
+                For i As Integer = 1 To q
+                    Dim cmdString As String = "insert into tbl_questions values(null,
+                    'multiple',
+                    'This is the content of question number " & i & ".',
+                    '" & examId & "',
+                    'Correct answer to question number " & i & "',
+                    'First wrong answer to question number " & i & "',
+                    'Second wrong answer to question number " & i & "',
+                    'Third wrong answer to question number " & i & "');"
+                    Dim cmd As New SQLiteCommand(cmdString, con)
+                    cmd.ExecuteNonQuery()
+                    cmd.Dispose()
+                Next
+
+                MessageBox.Show(q & "questions created!")
+
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString)
+            End Try
+        End If
     End Sub
 
     Private Sub BunifuButton6_Click(sender As Object, e As EventArgs) Handles btnAnswerKey.Click
-        Dim temp As New AnswerKey(con, setId)
-        temp.ShowDialog()
+        'MessageBox.Show(ListView3.SelectedItems.Count)
+        If ListView3.SelectedItems.Count = 1 Then
+            Dim temp As New SetForm(con, setId)
+            temp.ShowDialog()
+        End If
     End Sub
 
     Private Sub ListView3_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView3.MouseClick

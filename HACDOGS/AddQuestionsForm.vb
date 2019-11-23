@@ -3,6 +3,10 @@ Public Class AddQuestionsForm
     Dim con As SQLiteConnection
     Dim examId As String
 
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -21,6 +25,28 @@ Public Class AddQuestionsForm
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
+
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, BunifuLabel5.MouseDown
+        drag = True
+        'Me.WindowState = FormWindowState.Normal
+        mousex = Cursor.Position.X - Me.Left
+        mousey = Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove, BunifuLabel5.MouseMove
+        If drag Then
+
+            Me.Top = Cursor.Position.Y - mousey
+            Me.Left = Cursor.Position.X - mousex
+            Me.WindowState = FormWindowState.Normal
+            'A = 0
+        End If
+    End Sub
+
+    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp, BunifuLabel5.MouseUp
+        drag = False
+    End Sub
+
     Private Sub btnEnterQuestion_Click(sender As Object, e As EventArgs) Handles btnEnterQuestion.Click
         Try
             Dim cmdString As String = "insert into tbl_questions values(null, 'multiple', '" & txtQuestion.Text & "','" & examId & "','" & txtCorrectAnswer.Text & "','" & txtWrongAnswer1.Text & "','" & txtWrongAnswer2.Text & "','" & txtWrongAnswer3.Text & "');"

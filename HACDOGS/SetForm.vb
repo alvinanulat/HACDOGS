@@ -1,8 +1,13 @@
 ﻿Imports System.Data.SQLite
 
-Public Class AnswerKey
+Public Class SetForm
     Dim con As SQLiteConnection
     Dim setId As String
+
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -20,6 +25,30 @@ Public Class AnswerKey
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
+
+
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
+        drag = True
+        'Me.WindowState = FormWindowState.Normal
+        mousex = Cursor.Position.X - Me.Left
+        mousey = Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        If drag Then
+
+            Me.Top = Cursor.Position.Y - mousey
+            Me.Left = Cursor.Position.X - mousex
+            Me.WindowState = FormWindowState.Normal
+            'A = 0
+        End If
+    End Sub
+
+    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+        drag = False
+    End Sub
+
+
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
         Me.Close()
     End Sub

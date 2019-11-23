@@ -118,7 +118,7 @@ Public Class registerForm
             Dim cmd As New SQLiteCommand(cmdstring, con)
             dr = cmd.ExecuteReader()
             While (dr.Read())
-                MessageBox.Show("Logging in...")
+                'MessageBox.Show("Logging in...")
                 username = cbUser.Text
                 cbUser.ResetText()
                 txtPass1.ResetText()

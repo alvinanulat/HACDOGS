@@ -100,6 +100,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
@@ -174,10 +177,10 @@
     <Compile Include="AddQuestionsForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnswerKey.Designer.vb">
-      <DependentUpon>AnswerKey.vb</DependentUpon>
+    <Compile Include="SetForm.Designer.vb">
+      <DependentUpon>SetForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AnswerKey.vb">
+    <Compile Include="SetForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb" />
@@ -185,10 +188,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainForm.Designer.vb">
-      <DependentUpon>mainForm.vb</DependentUpon>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="mainForm.vb">
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -220,14 +223,14 @@
     <EmbeddedResource Include="AddQuestionsForm.resx">
       <DependentUpon>AddQuestionsForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnswerKey.resx">
-      <DependentUpon>AnswerKey.vb</DependentUpon>
+    <EmbeddedResource Include="SetForm.resx">
+      <DependentUpon>SetForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainForm.resx">
-      <DependentUpon>mainForm.vb</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
