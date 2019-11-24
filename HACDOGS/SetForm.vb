@@ -133,6 +133,10 @@ Public Class SetForm
         lblAcadYear.Text = acadyear
         lblSem.Text = sem
 
+
+
+        PictureBox1.Visible = False
+        Label1.Visible = False
     End Sub
 
 
@@ -150,8 +154,10 @@ Public Class SetForm
     End Sub
 
     Private Sub btnWord_Click(sender As Object, e As EventArgs) Handles btnWord.Click
+        Timer1.Start()
+        PictureBox1.Visible = True
+        Label1.Visible = True
         Try
-
 
 
             Dim objWordApp As New Word.Application
@@ -211,9 +217,27 @@ Public Class SetForm
             'objDoc = Nothing
             'objWordApp.Quit()
             'objWordApp = Nothing
+            'ProgressBar1.Visible = False
+            Timer1.Stop()
+            PictureBox1.Visible = False
+            Label1.Visible = False
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
+
+    End Sub
+
+    Dim a As Boolean
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        If A = True Then
+            Label1.Show()
+            A = False
+        ElseIf A = False Then
+            Label1.Hide()
+            A = True
+        End If
 
     End Sub
 End Class

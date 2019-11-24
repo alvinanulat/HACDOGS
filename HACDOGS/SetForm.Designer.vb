@@ -22,9 +22,10 @@ Partial Class SetForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SetForm))
-        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -35,8 +36,6 @@ Partial Class SetForm
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblSetAlias = New Bunifu.UI.WinForms.BunifuLabel()
-        Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.btnWord = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.BunifuLabel2 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
@@ -45,7 +44,14 @@ Partial Class SetForm
         Me.lblSubject = New Bunifu.UI.WinForms.BunifuLabel()
         Me.lblAcadYear = New Bunifu.UI.WinForms.BunifuLabel()
         Me.lblSem = New Bunifu.UI.WinForms.BunifuLabel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnWord = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListView1
@@ -126,70 +132,6 @@ Partial Class SetForm
         Me.lblSetAlias.Text = "Set Alias"
         Me.lblSetAlias.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         Me.lblSetAlias.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
-        '
-        'BunifuButton1
-        '
-        Me.BunifuButton1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuButton1.BackgroundImage = CType(resources.GetObject("BunifuButton1.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuButton1.ButtonText = "Exit"
-        Me.BunifuButton1.ButtonTextMarginLeft = 0
-        Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.Gray
-        Me.BunifuButton1.DisabledForecolor = System.Drawing.Color.White
-        Me.BunifuButton1.ForeColor = System.Drawing.Color.White
-        Me.BunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.BunifuButton1.IconPadding = 10
-        Me.BunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.BunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.BunifuButton1.IdleBorderRadius = 1
-        Me.BunifuButton1.IdleBorderThickness = 0
-        Me.BunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.BunifuButton1.IdleIconLeftImage = Nothing
-        Me.BunifuButton1.IdleIconRightImage = Nothing
-        Me.BunifuButton1.Location = New System.Drawing.Point(513, 445)
-        Me.BunifuButton1.Name = "BunifuButton1"
-        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties1.BorderRadius = 1
-        StateProperties1.BorderThickness = 1
-        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties1.IconLeftImage = Nothing
-        StateProperties1.IconRightImage = Nothing
-        Me.BunifuButton1.onHoverState = StateProperties1
-        Me.BunifuButton1.Size = New System.Drawing.Size(129, 29)
-        Me.BunifuButton1.TabIndex = 47
-        Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnWord
-        '
-        Me.btnWord.BackColor = System.Drawing.Color.Transparent
-        Me.btnWord.BackgroundImage = CType(resources.GetObject("btnWord.BackgroundImage"), System.Drawing.Image)
-        Me.btnWord.ButtonText = "View in MS Word"
-        Me.btnWord.ButtonTextMarginLeft = 0
-        Me.btnWord.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.btnWord.DisabledFillColor = System.Drawing.Color.Gray
-        Me.btnWord.DisabledForecolor = System.Drawing.Color.White
-        Me.btnWord.ForeColor = System.Drawing.Color.White
-        Me.btnWord.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.btnWord.IconPadding = 10
-        Me.btnWord.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.btnWord.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnWord.IdleBorderRadius = 1
-        Me.btnWord.IdleBorderThickness = 0
-        Me.btnWord.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnWord.IdleIconLeftImage = Nothing
-        Me.btnWord.IdleIconRightImage = Nothing
-        Me.btnWord.Location = New System.Drawing.Point(236, 447)
-        Me.btnWord.Name = "btnWord"
-        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties2.BorderRadius = 1
-        StateProperties2.BorderThickness = 1
-        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties2.IconLeftImage = Nothing
-        StateProperties2.IconRightImage = Nothing
-        Me.btnWord.onHoverState = StateProperties2
-        Me.btnWord.Size = New System.Drawing.Size(129, 29)
-        Me.btnWord.TabIndex = 48
-        Me.btnWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BunifuLabel1
         '
@@ -303,11 +245,112 @@ Partial Class SetForm
         Me.lblSem.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.lblSem.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
+        'Timer1
+        '
+        '
+        'btnWord
+        '
+        Me.btnWord.BackColor = System.Drawing.Color.Transparent
+        Me.btnWord.BackgroundImage = CType(resources.GetObject("btnWord.BackgroundImage"), System.Drawing.Image)
+        Me.btnWord.ButtonText = "View in MS Word"
+        Me.btnWord.ButtonTextMarginLeft = 0
+        Me.btnWord.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.btnWord.DisabledFillColor = System.Drawing.Color.Gray
+        Me.btnWord.DisabledForecolor = System.Drawing.Color.White
+        Me.btnWord.ForeColor = System.Drawing.Color.White
+        Me.btnWord.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.btnWord.IconPadding = 10
+        Me.btnWord.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.btnWord.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnWord.IdleBorderRadius = 1
+        Me.btnWord.IdleBorderThickness = 0
+        Me.btnWord.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnWord.IdleIconLeftImage = Nothing
+        Me.btnWord.IdleIconRightImage = Nothing
+        Me.btnWord.Location = New System.Drawing.Point(236, 447)
+        Me.btnWord.Name = "btnWord"
+        StateProperties7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties7.BorderRadius = 1
+        StateProperties7.BorderThickness = 1
+        StateProperties7.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties7.IconLeftImage = Nothing
+        StateProperties7.IconRightImage = Nothing
+        Me.btnWord.onHoverState = StateProperties7
+        Me.btnWord.Size = New System.Drawing.Size(129, 29)
+        Me.btnWord.TabIndex = 48
+        Me.btnWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BunifuButton1
+        '
+        Me.BunifuButton1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuButton1.BackgroundImage = CType(resources.GetObject("BunifuButton1.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuButton1.ButtonText = "Exit"
+        Me.BunifuButton1.ButtonTextMarginLeft = 0
+        Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
+        Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.Gray
+        Me.BunifuButton1.DisabledForecolor = System.Drawing.Color.White
+        Me.BunifuButton1.ForeColor = System.Drawing.Color.White
+        Me.BunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton1.IconPadding = 10
+        Me.BunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default
+        Me.BunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BunifuButton1.IdleBorderRadius = 1
+        Me.BunifuButton1.IdleBorderThickness = 0
+        Me.BunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BunifuButton1.IdleIconLeftImage = Nothing
+        Me.BunifuButton1.IdleIconRightImage = Nothing
+        Me.BunifuButton1.Location = New System.Drawing.Point(513, 445)
+        Me.BunifuButton1.Name = "BunifuButton1"
+        StateProperties8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties8.BorderRadius = 1
+        StateProperties8.BorderThickness = 1
+        StateProperties8.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties8.IconLeftImage = Nothing
+        StateProperties8.IconRightImage = Nothing
+        Me.BunifuButton1.onHoverState = StateProperties8
+        Me.BunifuButton1.Size = New System.Drawing.Size(129, 29)
+        Me.BunifuButton1.TabIndex = 47
+        Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.LightSalmon
+        Me.PictureBox1.Location = New System.Drawing.Point(255, 201)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(368, 94)
+        Me.PictureBox1.TabIndex = 56
+        Me.PictureBox1.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.LightSalmon
+        Me.Label1.Font = New System.Drawing.Font("Arial", 30.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(300, 226)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(288, 45)
+        Me.Label1.TabIndex = 57
+        Me.Label1.Text = "PLEASE WAIT"
+        '
+        'BunifuElipse1
+        '
+        Me.BunifuElipse1.ElipseRadius = 20
+        Me.BunifuElipse1.TargetControl = Me.PictureBox1
+        '
         'SetForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(888, 492)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblSem)
         Me.Controls.Add(Me.lblAcadYear)
         Me.Controls.Add(Me.lblSubject)
@@ -324,9 +367,10 @@ Partial Class SetForm
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SetForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "AnswerKey"
+        Me.Text = "HACDOGS AnswerKey"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -352,4 +396,8 @@ Partial Class SetForm
     Friend WithEvents lblSubject As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents lblAcadYear As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents lblSem As Bunifu.UI.WinForms.BunifuLabel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
 End Class

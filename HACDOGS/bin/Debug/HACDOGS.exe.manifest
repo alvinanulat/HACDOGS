@@ -223,14 +223,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="914944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HACDOGS.exe" size="916480">
       <assemblyIdentity name="HACDOGS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0x4/eto/034DgKwGN6fZze0ks95lp5h8i+vegRuRPXo=</dsig:DigestValue>
+        <dsig:DigestValue>IdhrC7v1w8zcSBo//BO6LSM7AaU7YeBdIbYF6NOrdEY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
