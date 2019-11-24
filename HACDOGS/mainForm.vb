@@ -276,6 +276,8 @@ Public Class mainForm
             End Try
 
             refreshSubjects()
+        Else
+            MsgBox("Enter a valid Subject.")
         End If
 
 
@@ -292,17 +294,22 @@ Public Class mainForm
 
     Private Sub BunifuButton2_Click_1(sender As Object, e As EventArgs) Handles btnDeleteExam.Click
         Try
-            Dim cmdString As String = "delete from tbl_exams where exam_id=" & ListView1.SelectedItems(0).Tag
+            If ListView1.SelectedItems().Count > 0 Then
+                Dim cmdString As String = "delete from tbl_exams where exam_id=" & ListView1.SelectedItems(0).Tag
 
-            Dim deleteYN As System.Windows.Forms.DialogResult
-            deleteYN = MsgBox("Do you really want to delete the examination?", MsgBoxStyle.YesNo)
-            If deleteYN = MsgBoxResult.Yes Then
+                Dim deleteYN As System.Windows.Forms.DialogResult
+                deleteYN = MsgBox("Do you really want to delete the examination?", MsgBoxStyle.YesNo)
+                If deleteYN = MsgBoxResult.Yes Then
 
-                cmd = New SQLiteCommand(cmdString, con)
-                cmd.ExecuteNonQuery()
-                refreshExams()
-                ListView2.Items.Clear()
-                lblExamName.Text = "Examination"
+                    cmd = New SQLiteCommand(cmdString, con)
+                    cmd.ExecuteNonQuery()
+                    refreshExams()
+                    ListView2.Items.Clear()
+                    lblExamName.Text = "Examination"
+
+                End If
+            Else
+                MsgBox("Select what Examination will be deleted.")
             End If
         Catch ex As Exception
 
@@ -315,6 +322,8 @@ Public Class mainForm
             temp.ShowDialog()
             temp.Dispose()
             refreshExams()
+        Else
+            MsgBox("Select what Subject will be edited.")
         End If
     End Sub
 
@@ -328,6 +337,8 @@ Public Class mainForm
             temp.ShowDialog()
             temp.Dispose()
             refreshExams()
+        Else
+            MsgBox("Select what Examination will be edited.")
         End If
     End Sub
 
@@ -336,11 +347,13 @@ Public Class mainForm
     End Sub
 
     Private Sub BunifuButton2_Click_2(sender As Object, e As EventArgs) Handles BunifuButton2.Click
-        If ListView2.SelectedItems().Count > 0 Then
+        If ListView1.SelectedItems().Count > 0 Or ListView2.SelectedItems().Count > 0 Then
             Dim temp As AddQuestionsForm = New AddQuestionsForm(con, examId)
             temp.ShowDialog()
             refreshQuestions()
             temp.Dispose()
+        Else
+            MsgBox("Select what Examination will be added a new question.")
         End If
     End Sub
 
@@ -374,8 +387,6 @@ Public Class mainForm
                 Dim cmdString As String = "insert into tbl_sets values (null, '" & examId & "','" & Shuffle(qList.ToArray()) & "','" & aList & "','" & dateTimeNow & "_" & j & "');"
                 cmd = New SQLiteCommand(cmdString, con)
                 cmd.ExecuteNonQuery()
-
-
 
             Catch ex As Exception
                 MessageBox.Show(ex.ToString)
@@ -444,16 +455,19 @@ Public Class mainForm
 
     Private Sub BunifuButton3_Click(sender As Object, e As EventArgs) Handles BunifuButton3.Click
         Try
-            Dim index As String = ListView2.SelectedItems(0).Tag
-            Dim cmdString As String = "delete from tbl_questions where question_id='" & index & "';"
-            cmd = New SQLiteCommand(cmdString, con)
-            Dim DeleteYN As System.Windows.Forms.DialogResult
-            DeleteYN = MsgBox("Do you really want to delete the question?", MsgBoxStyle.YesNo)
-            If DeleteYN = MsgBoxResult.Yes Then
-                cmd.ExecuteNonQuery()
-                refreshQuestions()
+            If ListView2.SelectedItems().Count > 0 Then
+                Dim index As String = ListView2.SelectedItems(0).Tag
+                Dim cmdString As String = "delete from tbl_questions where question_id='" & index & "';"
+                cmd = New SQLiteCommand(cmdString, con)
+                Dim DeleteYN As System.Windows.Forms.DialogResult
+                DeleteYN = MsgBox("Do you really want to delete the question?", MsgBoxStyle.YesNo)
+                If DeleteYN = MsgBoxResult.Yes Then
+                    cmd.ExecuteNonQuery()
+                    refreshQuestions()
+                End If
+            Else
+                MsgBox("Select what Question will be deleted.")
             End If
-
         Catch ex As Exception
 
         End Try
@@ -551,6 +565,8 @@ Public Class mainForm
             Catch ex As Exception
                 MessageBox.Show(ex.ToString)
             End Try
+        Else
+            MsgBox("Select what Subject will be edited.")
         End If
     End Sub
 
@@ -559,7 +575,8 @@ Public Class mainForm
         If ListView3.SelectedItems.Count = 1 Then
             Dim temp As New SetForm(con, setId)
             temp.ShowDialog()
-
+        Else
+            MsgBox("Select what Exam Set will be opened.")
         End If
     End Sub
 
@@ -591,6 +608,8 @@ Public Class mainForm
             temp.ShowDialog()
             temp.Dispose()
             refreshQuestions()
+        Else
+            MsgBox("Select what Question will be edited.")
         End If
     End Sub
 End Class
