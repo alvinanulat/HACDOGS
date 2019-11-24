@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SQLite
 Imports Word = Microsoft.Office.Interop.Word
 Public Class SetForm
-    Dim con As SQLiteConnection
-    Dim setId As String
+    ReadOnly con As SQLiteConnection
+    ReadOnly setId As String
     Dim examId As String
     Dim subjectId As String
 
