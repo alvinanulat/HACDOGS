@@ -24,8 +24,8 @@ Partial Class AddExaminationForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddExaminationForm))
-        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BunifuLabel5 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.BunifuLabel1 = New Bunifu.UI.WinForms.BunifuLabel()
@@ -33,10 +33,10 @@ Partial Class AddExaminationForm
         Me.BunifuLabel3 = New Bunifu.UI.WinForms.BunifuLabel()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuButton1 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
-        Me.BunifuTextBox1 = New Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox()
         Me.BunifuButton2 = New Bunifu.UI.WinForms.BunifuButton.BunifuButton()
         Me.BunifuDropdown1 = New Bunifu.UI.WinForms.BunifuDropdown()
         Me.BunifuDropdown2 = New Bunifu.UI.WinForms.BunifuDropdown()
+        Me.BunifuDropdown3 = New Bunifu.UI.WinForms.BunifuDropdown()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -132,59 +132,16 @@ Partial Class AddExaminationForm
         Me.BunifuButton1.IdleIconRightImage = Nothing
         Me.BunifuButton1.Location = New System.Drawing.Point(66, 212)
         Me.BunifuButton1.Name = "BunifuButton1"
-        StateProperties6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties6.BorderRadius = 1
-        StateProperties6.BorderThickness = 1
-        StateProperties6.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties6.IconLeftImage = Nothing
-        StateProperties6.IconRightImage = Nothing
-        Me.BunifuButton1.onHoverState = StateProperties6
+        StateProperties2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.BorderRadius = 1
+        StateProperties2.BorderThickness = 1
+        StateProperties2.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties2.IconLeftImage = Nothing
+        StateProperties2.IconRightImage = Nothing
+        Me.BunifuButton1.onHoverState = StateProperties2
         Me.BunifuButton1.Size = New System.Drawing.Size(112, 45)
         Me.BunifuButton1.TabIndex = 4
         Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BunifuTextBox1
-        '
-        Me.BunifuTextBox1.AcceptsReturn = False
-        Me.BunifuTextBox1.AcceptsTab = False
-        Me.BunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None
-        Me.BunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None
-        Me.BunifuTextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuTextBox1.BackgroundImage = CType(resources.GetObject("BunifuTextBox1.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuTextBox1.BorderColorActive = System.Drawing.Color.Empty
-        Me.BunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer), CType(CType(161, Byte), Integer))
-        Me.BunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.BunifuTextBox1.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.BunifuTextBox1.BorderRadius = 1
-        Me.BunifuTextBox1.BorderThickness = 2
-        Me.BunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.BunifuTextBox1.DefaultFont = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuTextBox1.DefaultText = ""
-        Me.BunifuTextBox1.FillColor = System.Drawing.Color.White
-        Me.BunifuTextBox1.HideSelection = True
-        Me.BunifuTextBox1.IconLeft = Nothing
-        Me.BunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.Default
-        Me.BunifuTextBox1.IconPadding = 10
-        Me.BunifuTextBox1.IconRight = Nothing
-        Me.BunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default
-        Me.BunifuTextBox1.Location = New System.Drawing.Point(140, 68)
-        Me.BunifuTextBox1.MaxLength = 32767
-        Me.BunifuTextBox1.MinimumSize = New System.Drawing.Size(100, 35)
-        Me.BunifuTextBox1.Modified = False
-        Me.BunifuTextBox1.Name = "BunifuTextBox1"
-        Me.BunifuTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.BunifuTextBox1.ReadOnly = False
-        Me.BunifuTextBox1.SelectedText = ""
-        Me.BunifuTextBox1.SelectionLength = 0
-        Me.BunifuTextBox1.SelectionStart = 0
-        Me.BunifuTextBox1.ShortcutsEnabled = True
-        Me.BunifuTextBox1.Size = New System.Drawing.Size(200, 35)
-        Me.BunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu
-        Me.BunifuTextBox1.TabIndex = 1
-        Me.BunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.BunifuTextBox1.TextMarginLeft = 0
-        Me.BunifuTextBox1.TextPlaceholder = "Enter Exam Name"
-        Me.BunifuTextBox1.UseSystemPasswordChar = False
         '
         'BunifuButton2
         '
@@ -207,13 +164,13 @@ Partial Class AddExaminationForm
         Me.BunifuButton2.IdleIconRightImage = Nothing
         Me.BunifuButton2.Location = New System.Drawing.Point(211, 212)
         Me.BunifuButton2.Name = "BunifuButton2"
-        StateProperties5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties5.BorderRadius = 1
-        StateProperties5.BorderThickness = 1
-        StateProperties5.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
-        StateProperties5.IconLeftImage = Nothing
-        StateProperties5.IconRightImage = Nothing
-        Me.BunifuButton2.onHoverState = StateProperties5
+        StateProperties1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties1.BorderRadius = 1
+        StateProperties1.BorderThickness = 1
+        StateProperties1.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(54, Byte), Integer))
+        StateProperties1.IconLeftImage = Nothing
+        StateProperties1.IconRightImage = Nothing
+        Me.BunifuButton2.onHoverState = StateProperties1
         Me.BunifuButton2.Size = New System.Drawing.Size(112, 45)
         Me.BunifuButton2.TabIndex = 49
         Me.BunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -282,18 +239,51 @@ Partial Class AddExaminationForm
         Me.BunifuDropdown2.Size = New System.Drawing.Size(200, 32)
         Me.BunifuDropdown2.TabIndex = 51
         '
+        'BunifuDropdown3
+        '
+        Me.BunifuDropdown3.BackColor = System.Drawing.SystemColors.Control
+        Me.BunifuDropdown3.BorderRadius = 1
+        Me.BunifuDropdown3.Color = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BunifuDropdown3.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down
+        Me.BunifuDropdown3.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuDropdown3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.BunifuDropdown3.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick
+        Me.BunifuDropdown3.DropDownHeight = 80
+        Me.BunifuDropdown3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.BunifuDropdown3.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left
+        Me.BunifuDropdown3.FillDropDown = False
+        Me.BunifuDropdown3.FillIndicator = False
+        Me.BunifuDropdown3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BunifuDropdown3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuDropdown3.ForeColor = System.Drawing.Color.Black
+        Me.BunifuDropdown3.FormattingEnabled = True
+        Me.BunifuDropdown3.Icon = Nothing
+        Me.BunifuDropdown3.IndicatorColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BunifuDropdown3.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right
+        Me.BunifuDropdown3.IntegralHeight = False
+        Me.BunifuDropdown3.ItemBackColor = System.Drawing.Color.White
+        Me.BunifuDropdown3.ItemBorderColor = System.Drawing.Color.White
+        Me.BunifuDropdown3.ItemForeColor = System.Drawing.Color.Black
+        Me.BunifuDropdown3.ItemHeight = 26
+        Me.BunifuDropdown3.ItemHighLightColor = System.Drawing.Color.Thistle
+        Me.BunifuDropdown3.Items.AddRange(New Object() {"First Long Examination", "Midterm Examination", "Second Long Examination", "Final Examination"})
+        Me.BunifuDropdown3.Location = New System.Drawing.Point(140, 71)
+        Me.BunifuDropdown3.Name = "BunifuDropdown3"
+        Me.BunifuDropdown3.Size = New System.Drawing.Size(200, 32)
+        Me.BunifuDropdown3.TabIndex = 52
+        '
         'AddExaminationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(389, 280)
+        Me.Controls.Add(Me.BunifuDropdown3)
         Me.Controls.Add(Me.BunifuDropdown2)
         Me.Controls.Add(Me.BunifuDropdown1)
         Me.Controls.Add(Me.BunifuButton2)
         Me.Controls.Add(Me.BunifuButton1)
         Me.Controls.Add(Me.BunifuLabel3)
         Me.Controls.Add(Me.BunifuLabel2)
-        Me.Controls.Add(Me.BunifuTextBox1)
         Me.Controls.Add(Me.BunifuLabel1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -309,7 +299,6 @@ Partial Class AddExaminationForm
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BunifuLabel1 As Bunifu.UI.WinForms.BunifuLabel
-    Friend WithEvents BunifuTextBox1 As Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox
     Friend WithEvents BunifuLabel2 As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents BunifuLabel3 As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents BunifuButton1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton
@@ -318,4 +307,5 @@ Partial Class AddExaminationForm
     Friend WithEvents BunifuLabel5 As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents BunifuDropdown2 As Bunifu.UI.WinForms.BunifuDropdown
     Friend WithEvents BunifuDropdown1 As Bunifu.UI.WinForms.BunifuDropdown
+    Friend WithEvents BunifuDropdown3 As Bunifu.UI.WinForms.BunifuDropdown
 End Class

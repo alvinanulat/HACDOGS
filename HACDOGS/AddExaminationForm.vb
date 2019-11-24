@@ -37,7 +37,7 @@ Public Class AddExaminationForm
         BunifuLabel5.Text = "Editing Examination"
         Me.examId = examId
         Me.con = con
-        BunifuTextBox1.Text = examName
+        BunifuDropdown3.Text = examName
         BunifuDropdown1.Text = acadYear
         BunifuDropdown2.Text = sem
 
@@ -70,9 +70,9 @@ Public Class AddExaminationForm
         Try
             Dim cmdString As String
             If isEditing Then
-                cmdstring = "update tbl_exams set exam_name='" & BunifuTextBox1.Text & "', academic_year='" & BunifuDropdown1.Text & "', semester='" & BunifuDropdown2.Text & "' where exam_id='" & examId & "';"
+                cmdString = "update tbl_exams set exam_name='" & BunifuDropdown3.Text & "', academic_year='" & BunifuDropdown1.Text & "', semester='" & BunifuDropdown2.Text & "' where exam_id='" & examId & "';"
             Else
-                cmdstring = "insert into tbl_exams values (null, '" & BunifuTextBox1.Text & "', '" & subjectId & "', '0','" & BunifuDropdown1.Text & "', '" & BunifuDropdown2.Text & "');"
+                cmdString = "insert into tbl_exams values (null, '" & BunifuDropdown3.Text & "', '" & subjectId & "', '0','" & BunifuDropdown1.Text & "', '" & BunifuDropdown2.Text & "');"
             End If
             'MessageBox.Show(cmdstring)
             Dim cmd As SQLiteCommand
@@ -97,7 +97,7 @@ Public Class AddExaminationForm
         BunifuDropdown2.Items.Add("2nd Semester")
         BunifuDropdown2.Items.Add("Summer")
 
-        BunifuTextBox1.Select()
+        BunifuDropdown3.Select()
 
 
     End Sub

@@ -126,3 +126,4 @@ C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbproj
 C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.exe
 C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.xml
 C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.pdb
+C:\Users\buenl\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbprojAssemblyReference.cache

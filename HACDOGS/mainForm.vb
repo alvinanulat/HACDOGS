@@ -222,8 +222,12 @@ Public Class mainForm
                     refreshSubjects()
                     ListView1.Items.Clear()
                     lblSubjectName.Text = "Subject"
+                    subjectId = ""
                     ListView2.Items.Clear()
                     lblExamName.Text = "Exam"
+                    examId = ""
+                    ListView3.Items.Clear()
+                    setId = ""
                 Catch ex As Exception
                     MessageBox.Show(ex.ToString())
                 End Try
@@ -306,21 +310,25 @@ Public Class mainForm
     End Sub
 
     Private Sub BunifuButton1_Click_1(sender As Object, e As EventArgs) Handles btnAddExam.Click
-        Dim temp As New AddExaminationForm(con, subjectId)
-        temp.ShowDialog()
-        temp.Dispose()
-        refreshExams()
+        If subjectId <> "" Then
+            Dim temp As New AddExaminationForm(con, subjectId)
+            temp.ShowDialog()
+            temp.Dispose()
+            refreshExams()
+        End If
     End Sub
 
     Private Sub btnEditExam_Click(sender As Object, e As EventArgs) Handles btnEditExam.Click
-        Dim examName As String = ListView1.SelectedItems(0).SubItems.Item(1).Text
-        Dim acadYear As String = ListView1.SelectedItems(0).SubItems.Item(3).Text
-        Dim sem As String = ListView1.SelectedItems(0).SubItems.Item(4).Text
+        If ListView1.SelectedItems().Count > 0 Then
+            Dim examName As String = ListView1.SelectedItems(0).SubItems.Item(1).Text
+            Dim acadYear As String = ListView1.SelectedItems(0).SubItems.Item(3).Text
+            Dim sem As String = ListView1.SelectedItems(0).SubItems.Item(4).Text
 
-        Dim temp As AddExaminationForm = New AddExaminationForm(con, examId, examName, acadYear, sem)
-        temp.ShowDialog()
-        temp.Dispose()
-        refreshExams()
+            Dim temp As AddExaminationForm = New AddExaminationForm(con, examId, examName, acadYear, sem)
+            temp.ShowDialog()
+            temp.Dispose()
+            refreshExams()
+        End If
     End Sub
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
@@ -551,6 +559,7 @@ Public Class mainForm
         If ListView3.SelectedItems.Count = 1 Then
             Dim temp As New SetForm(con, setId)
             temp.ShowDialog()
+
         End If
     End Sub
 
@@ -571,15 +580,17 @@ Public Class mainForm
     End Sub
 
     Private Sub BunifuButton1_Click_2(sender As Object, e As EventArgs) Handles BunifuButton1.Click
-        Dim q As String = ListView2.SelectedItems(0).SubItems.Item(1).Text
-        Dim c As String = ListView2.SelectedItems(0).SubItems.Item(2).Text
-        Dim w1 As String = ListView2.SelectedItems(0).SubItems.Item(3).Text
-        Dim w2 As String = ListView2.SelectedItems(0).SubItems.Item(4).Text
-        Dim w3 As String = ListView2.SelectedItems(0).SubItems.Item(5).Text
+        If ListView2.SelectedItems().Count > 0 Then
+            Dim q As String = ListView2.SelectedItems(0).SubItems.Item(1).Text
+            Dim c As String = ListView2.SelectedItems(0).SubItems.Item(2).Text
+            Dim w1 As String = ListView2.SelectedItems(0).SubItems.Item(3).Text
+            Dim w2 As String = ListView2.SelectedItems(0).SubItems.Item(4).Text
+            Dim w3 As String = ListView2.SelectedItems(0).SubItems.Item(5).Text
 
-        Dim temp As AddQuestionsForm = New AddQuestionsForm(con, questionId, q, c, w1, w2, w3)
-        temp.ShowDialog()
-        temp.Dispose()
-        refreshQuestions()
+            Dim temp As AddQuestionsForm = New AddQuestionsForm(con, questionId, q, c, w1, w2, w3)
+            temp.ShowDialog()
+            temp.Dispose()
+            refreshQuestions()
+        End If
     End Sub
 End Class

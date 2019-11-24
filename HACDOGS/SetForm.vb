@@ -70,9 +70,7 @@ Public Class SetForm
         Dim questions As String = ""
         While dr.Read()
             questions = dr.GetString(0)
-            'MessageBox.Show(questions)
             answers = dr.GetString(1)
-            'MessageBox.Show(answers)
             lblSetAlias.Text = dr.GetString(2)
             examId = dr.GetInt16(3)
         End While
@@ -109,7 +107,6 @@ Public Class SetForm
 
 
         cmdString = "select exam_name,academic_year,semester,subject_id from tbl_exams where exam_id = '" & examId & "';"
-        MsgBox(cmdString)
         cmd.CommandText = cmdString
         dr = cmd.ExecuteReader()
         'Dim answers As String = ""
@@ -123,10 +120,8 @@ Public Class SetForm
         dr.Close()
 
         cmdString = "select subject_name from tbl_subjects where subject_id='" & subjectId & "';"
-        MsgBox(cmdString)
         cmd.CommandText = cmdString
         dr = cmd.ExecuteReader()
-        Dim subject As String = ""
         While dr.Read()
             subject = dr.GetString(0)
             ' MessageBox.Show(sem)
@@ -155,29 +150,70 @@ Public Class SetForm
     End Sub
 
     Private Sub btnWord_Click(sender As Object, e As EventArgs) Handles btnWord.Click
-        Dim objWordApp As New Word.Application
-        objWordApp.Visible = True
+        Try
 
-        'Open an existing document.  
-        Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx")
-        objDoc = objWordApp.ActiveDocument
 
-        'Find and replace some text  
-        'Replace 'VB' with 'Visual Basic'  
-        objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
-        objDoc.Content.Find.Execute(FindText:="$acadyear$", ReplaceWith:=acadyear, Replace:=Word.WdReplace.wdReplaceAll)
-        objDoc.Content.Find.Execute(FindText:="$exam$", ReplaceWith:=exam, Replace:=Word.WdReplace.wdReplaceAll)
-        objDoc.Content.Find.Execute(FindText:="$subject$", ReplaceWith:=subject, Replace:=Word.WdReplace.wdReplaceAll)
-        'objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
-        While objDoc.Content.Find.Execute(FindText:="  ", Wrap:=Word.WdFindWrap.wdFindContinue)
-            objDoc.Content.Find.Execute(FindText:="  ", ReplaceWith:=" ", Replace:=Word.WdReplace.wdReplaceAll, Wrap:=Word.WdFindWrap.wdFindContinue)
-        End While
 
-        'Save And Close() the document  
-        'objDoc.Save()
-        'objDoc.Close()
-        'objDoc = Nothing
-        'objWordApp.Quit()
-        'objWordApp = Nothing
+            Dim objWordApp As New Word.Application
+
+            'Open an existing document.  
+            Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx")
+            objDoc = objWordApp.ActiveDocument
+
+            'Find and replace some text  
+            'Replace 'VB' with 'Visual Basic'  
+            objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
+            objDoc.Content.Find.Execute(FindText:="$acadyear$", ReplaceWith:=acadyear, Replace:=Word.WdReplace.wdReplaceAll)
+            objDoc.Content.Find.Execute(FindText:="$exam$", ReplaceWith:=exam, Replace:=Word.WdReplace.wdReplaceAll)
+            objDoc.Content.Find.Execute(FindText:="$subject$", ReplaceWith:=subject, Replace:=Word.WdReplace.wdReplaceAll)
+
+            'objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
+            'While objDoc.Content.Find.Execute(FindText:="  ", Wrap:=Word.WdFindWrap.wdFindContinue)
+            'objDoc.Content.Find.Execute(FindText:="  ", ReplaceWith:=" ", Replace:=Word.WdReplace.wdReplaceAll, Wrap:=Word.WdFindWrap.wdFindContinue)
+            'End While
+
+            Dim content As String = ""
+            For Each lvi As ListViewItem In ListView1.Items
+                Dim no As String = lvi.Text
+                Dim choices As String = ""
+                Dim question As String = lvi.SubItems(1).Text
+                Dim correctLetter As String = lvi.SubItems(2).Text
+                Dim c As String = lvi.SubItems(3).Text
+                Dim w1 As String = lvi.SubItems(4).Text
+                Dim w2 As String = lvi.SubItems(5).Text
+                Dim w3 As String = lvi.SubItems(6).Text
+
+                If correctLetter = "a" Then
+                    choices = vbTab & "a) " & c & "^p" & vbTab & "b) " & w1 & "^p" & vbTab & "c) " & w2 & "^p" & vbTab & "d) " & w3 & "^p"
+                ElseIf correctLetter = "b" Then
+                    choices = vbTab & "a) " & w1 & "^p" & vbTab & "b) " & c & "^p" & vbTab & "c) " & w2 & "^p" & vbTab & "d) " & w3 & "^p"
+                ElseIf correctLetter = "c" Then
+                    choices = vbTab & "a) " & w1 & "^p" & vbTab & "b) " & w2 & "^p" & vbTab & "c) " & c & "^p" & vbTab & "d) " & w3 & "^p"
+                ElseIf correctLetter = "d" Then
+                    choices = vbTab & "a) " & w1 & "^p" & vbTab & "b) " & w2 & "^p" & vbTab & "c) " & w3 & "^p" & vbTab & "d) " & c & "^p"
+
+                End If
+
+                content = "____ " & no & ") " & question & "^p" & choices
+                If no <> ListView1.Items.Count Then
+                    content &= "$content$"
+                End If
+                objDoc.Content.Find.Execute(FindText:="$content$", ReplaceWith:=content, Replace:=Word.WdReplace.wdReplaceAll)
+
+            Next
+            'MessageBox.Show(content)
+
+            objWordApp.Visible = True
+
+            'Save And Close() the document  
+            'objDoc.SaveAs2(FileName:=,FileFormat:=,)
+            'objDoc.Close()
+            'objDoc = Nothing
+            'objWordApp.Quit()
+            'objWordApp = Nothing
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+
     End Sub
 End Class
