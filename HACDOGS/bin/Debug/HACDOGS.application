@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="HACDOGS.exe.manifest" size="17184">
+    <dependentAssembly dependencyType="install" codebase="HACDOGS.exe.manifest" size="17902">
       <assemblyIdentity name="HACDOGS.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fWeyEX/YtLv4TXB55jMIRacyGBWWAPl3VNlgkDLhrd0=</dsig:DigestValue>
+        <dsig:DigestValue>XuhT1U/ojmv0kUZodqGmO/xEcq8RspmJwT6AdEtfRJg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

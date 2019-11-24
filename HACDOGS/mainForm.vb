@@ -313,7 +313,14 @@ Public Class mainForm
     End Sub
 
     Private Sub btnEditExam_Click(sender As Object, e As EventArgs) Handles btnEditExam.Click
+        Dim examName As String = ListView1.SelectedItems(0).SubItems.Item(1).Text
+        Dim acadYear As String = ListView1.SelectedItems(0).SubItems.Item(3).Text
+        Dim sem As String = ListView1.SelectedItems(0).SubItems.Item(4).Text
 
+        Dim temp As AddExaminationForm = New AddExaminationForm(con, examId, examName, acadYear, sem)
+        temp.ShowDialog()
+        temp.Dispose()
+        refreshExams()
     End Sub
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
@@ -321,10 +328,12 @@ Public Class mainForm
     End Sub
 
     Private Sub BunifuButton2_Click_2(sender As Object, e As EventArgs) Handles BunifuButton2.Click
-        Dim temp As AddQuestionsForm = New AddQuestionsForm(con, examId)
-        temp.ShowDialog()
-        refreshQuestions()
-        temp.Dispose()
+        If ListView2.SelectedItems().Count > 0 Then
+            Dim temp As AddQuestionsForm = New AddQuestionsForm(con, examId)
+            temp.ShowDialog()
+            refreshQuestions()
+            temp.Dispose()
+        End If
     End Sub
 
     Private Sub BunifuButton4_Click(sender As Object, e As EventArgs) Handles BunifuButton4.Click
@@ -559,5 +568,18 @@ Public Class mainForm
 
     Private Sub ListView2_Click(sender As Object, e As EventArgs) Handles ListView2.Click
         questionId = ListView2.SelectedItems(0).Tag
+    End Sub
+
+    Private Sub BunifuButton1_Click_2(sender As Object, e As EventArgs) Handles BunifuButton1.Click
+        Dim q As String = ListView2.SelectedItems(0).SubItems.Item(1).Text
+        Dim c As String = ListView2.SelectedItems(0).SubItems.Item(2).Text
+        Dim w1 As String = ListView2.SelectedItems(0).SubItems.Item(3).Text
+        Dim w2 As String = ListView2.SelectedItems(0).SubItems.Item(4).Text
+        Dim w3 As String = ListView2.SelectedItems(0).SubItems.Item(5).Text
+
+        Dim temp As AddQuestionsForm = New AddQuestionsForm(con, questionId, q, c, w1, w2, w3)
+        temp.ShowDialog()
+        temp.Dispose()
+        refreshQuestions()
     End Sub
 End Class

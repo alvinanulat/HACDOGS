@@ -3,10 +3,13 @@
 Public Class AddExaminationForm
     Dim con As SQLiteConnection
     Dim subjectId As String
+    Dim examId As String
 
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
+
+    Dim isEditing As Boolean = False
 
     Public Sub New()
 
@@ -22,6 +25,22 @@ Public Class AddExaminationForm
         InitializeComponent()
         Me.con = con
         Me.subjectId = subjectId
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Public Sub New(con As SQLiteConnection, examId As String, examName As String, acadYear As String, sem As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        isEditing = True
+        BunifuLabel5.Text = "Editing Examination"
+        Me.examId = examId
+        Me.con = con
+        BunifuTextBox1.Text = examName
+        BunifuDropdown1.Text = acadYear
+        BunifuDropdown2.Text = sem
+
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -49,8 +68,13 @@ Public Class AddExaminationForm
 
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
         Try
-            Dim cmdString As String = "insert into tbl_exams values (null, '" & BunifuTextBox1.Text & "', '" & subjectId & "', '0','" & BunifuTextBox2.Text & "', '" & BunifuTextBox3.Text & "');"
-
+            Dim cmdString As String
+            If isEditing Then
+                cmdstring = "update tbl_exams set exam_name='" & BunifuTextBox1.Text & "', academic_year='" & BunifuDropdown1.Text & "', semester='" & BunifuDropdown2.Text & "' where exam_id='" & examId & "';"
+            Else
+                cmdstring = "insert into tbl_exams values (null, '" & BunifuTextBox1.Text & "', '" & subjectId & "', '0','" & BunifuDropdown1.Text & "', '" & BunifuDropdown2.Text & "');"
+            End If
+            'MessageBox.Show(cmdstring)
             Dim cmd As SQLiteCommand
             cmd = New SQLiteCommand(cmdString, con)
             cmd.ExecuteNonQuery()
@@ -62,12 +86,20 @@ Public Class AddExaminationForm
 
     End Sub
 
-    Private Sub BunifuTextBox1_TextChange(sender As Object, e As EventArgs) Handles BunifuTextBox1.TextChange
-
-    End Sub
-
     Private Sub AddExaminationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim dateNow As Date = New Date().Now()
+        Dim yearNow As String = dateNow.Year
+
+        For i As Integer = yearNow To 2000 Step -1
+            BunifuDropdown1.Items.Add(i & "-" & i + 1)
+        Next
+        BunifuDropdown2.Items.Add("1st Semester")
+        BunifuDropdown2.Items.Add("2nd Semester")
+        BunifuDropdown2.Items.Add("Summer")
+
         BunifuTextBox1.Select()
+
+
     End Sub
 
     Private Sub AddExaminationForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown

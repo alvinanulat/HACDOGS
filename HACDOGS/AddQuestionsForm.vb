@@ -2,11 +2,13 @@
 Public Class AddQuestionsForm
     Dim con As SQLiteConnection
     Dim examId As String
+    Dim questionId As String
 
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
 
+    Dim isEditing As Boolean = False
     Public Sub New()
 
         ' This call is required by the designer.
@@ -22,6 +24,24 @@ Public Class AddQuestionsForm
         InitializeComponent()
         Me.con = con
         Me.examId = examId
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Public Sub New(con As SQLiteConnection, questionId As String, q As String, c As String, w1 As String, w2 As String, w3 As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        Me.con = con
+        Me.questionId = questionId
+        txtQuestion.Text = q
+        txtCorrectAnswer.Text = c
+        txtWrongAnswer1.Text = w1
+        txtWrongAnswer2.Text = w2
+        txtWrongAnswer3.Text = w3
+        BunifuLabel5.Text = "Edit Question"
+
+        isEditing = True
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -49,7 +69,18 @@ Public Class AddQuestionsForm
 
     Private Sub btnEnterQuestion_Click(sender As Object, e As EventArgs) Handles btnEnterQuestion.Click
         Try
-            Dim cmdString As String = "insert into tbl_questions values(null, 'multiple', '" & txtQuestion.Text & "','" & examId & "','" & txtCorrectAnswer.Text & "','" & txtWrongAnswer1.Text & "','" & txtWrongAnswer2.Text & "','" & txtWrongAnswer3.Text & "');"
+            Dim cmdString As String
+            If isEditing Then
+                cmdString = "update tbl_questions set question_content='" & txtQuestion.Text & "',
+                                correct_answer='" & txtCorrectAnswer.Text & "',
+                                wrong_answer1='" & txtWrongAnswer1.Text & "',
+                                wrong_answer2='" & txtWrongAnswer2.Text & "',
+                                wrong_answer3='" & txtWrongAnswer3.Text & "' where question_id='" & questionId & "';"
+            Else
+                cmdString = "insert into tbl_questions values(null, 'multiple', '" & txtQuestion.Text & "','" & examId & "','" & txtCorrectAnswer.Text & "','" & txtWrongAnswer1.Text & "','" & txtWrongAnswer2.Text & "','" & txtWrongAnswer3.Text & "');"
+
+            End If
+
             Dim cmd As New SQLiteCommand(cmdString, con)
             cmd.ExecuteNonQuery()
             Me.Close()
