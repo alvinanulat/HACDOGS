@@ -1,22 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alvin\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj": {}
+    "C:\\Users\\buenl\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\alvin\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj": {
+    "C:\\Users\\buenl\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alvin\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj",
+        "projectUniqueName": "C:\\Users\\buenl\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj",
         "projectName": "HACDOGS",
-        "projectPath": "C:\\Users\\alvin\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj",
-        "packagesPath": "C:\\Users\\alvin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alvin\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\obj\\",
+        "projectPath": "C:\\Users\\buenl\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\HACDOGS.vbproj",
+        "packagesPath": "C:\\Users\\buenl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\buenl\\Source\\Repos\\alvinanulat\\HACDOGS\\HACDOGS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\buenl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net452"

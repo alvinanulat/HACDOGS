@@ -16,6 +16,11 @@ Public Class SetForm
     Dim section As String = ""
     Dim subject As String = ""
 
+    Dim objWordApp As New Word.Application
+
+    'Open an existing document.  
+    Dim objDoc As Word.Document
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -58,6 +63,16 @@ Public Class SetForm
 
 
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
+        Try
+            objDoc.Close()
+            objDoc = Nothing
+            objWordApp.Quit()
+            objWordApp = Nothing
+
+        Catch ex As Exception
+
+        End Try
+
         Me.Close()
     End Sub
 
@@ -160,10 +175,11 @@ Public Class SetForm
         Try
 
 
-            Dim objWordApp As New Word.Application
+            'Dim objWordApp As New Word.Application
 
             'Open an existing document.  
-            Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx")
+            'Dim objDoc As Word.Document = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx", ReadOnly:=True)
+            objDoc = objWordApp.Documents.Open(Environment.CurrentDirectory & "/db/examtemp.docx", ReadOnly:=True)
             objDoc = objWordApp.ActiveDocument
 
             'Find and replace some text  
@@ -172,6 +188,7 @@ Public Class SetForm
             objDoc.Content.Find.Execute(FindText:="$acadyear$", ReplaceWith:=acadyear, Replace:=Word.WdReplace.wdReplaceAll)
             objDoc.Content.Find.Execute(FindText:="$exam$", ReplaceWith:=exam, Replace:=Word.WdReplace.wdReplaceAll)
             objDoc.Content.Find.Execute(FindText:="$subject$", ReplaceWith:=subject, Replace:=Word.WdReplace.wdReplaceAll)
+            objDoc.Content.Find.Execute(FindText:="$setalias$", ReplaceWith:=lblSetAlias.Text, Replace:=Word.WdReplace.wdReplaceAll)
 
             'objDoc.Content.Find.Execute(FindText:="$sem$", ReplaceWith:=sem, Replace:=Word.WdReplace.wdReplaceAll)
             'While objDoc.Content.Find.Execute(FindText:="  ", Wrap:=Word.WdFindWrap.wdFindContinue)
@@ -210,13 +227,16 @@ Public Class SetForm
             'MessageBox.Show(content)
 
             objWordApp.Visible = True
-
+            objWordApp.ActiveWindow.View.ReadingLayout = False
             'Save And Close() the document  
-            'objDoc.SaveAs2(FileName:=,FileFormat:=,)
-            'objDoc.Close()
-            'objDoc = Nothing
-            'objWordApp.Quit()
-            'objWordApp = Nothing
+            'MessageBox.Show(Environment.CurrentDirectory & "\Examinations\" & lblSetAlias.Text & ".docx")
+            Try
+                objDoc.SaveAs2(FileName:=Environment.CurrentDirectory & "\Examinations\" & lblSetAlias.Text & ".docx", FileFormat:=16)
+
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString())
+            End Try
+
             'ProgressBar1.Visible = False
             Timer1.Stop()
             PictureBox1.Visible = False
@@ -231,12 +251,12 @@ Public Class SetForm
     Dim a As Boolean
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        If A = True Then
+        If a = True Then
             Label1.Show()
-            A = False
-        ElseIf A = False Then
+            a = False
+        ElseIf a = False Then
             Label1.Hide()
-            A = True
+            a = True
         End If
 
     End Sub
