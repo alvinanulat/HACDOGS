@@ -378,7 +378,7 @@ Public Class mainForm
             Try
                 aList = ""
                 For i As Integer = 1 To qList.Count
-                    aList &= rnd.Next(1, 4).ToString() & ","
+                    aList &= rnd.Next(1, 5).ToString() & ","
                 Next
 
                 aList = aList.Substring(0, aList.Length - 1)
