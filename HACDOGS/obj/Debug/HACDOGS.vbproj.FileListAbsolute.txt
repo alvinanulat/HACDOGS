@@ -41,8 +41,6 @@ C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.mainFo
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.Resources.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.registerForm.resources
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.vbproj.GenerateResource.Cache
-C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\HACDOGS.exe.manifest
-C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\HACDOGS.application
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\HACDOGS.exe
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\HACDOGS.pdb
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\HACDOGS.xml
@@ -61,8 +59,6 @@ C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinF
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.xml
-C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.exe.manifest
-C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.application
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\obj\Debug\HACDOGS.pdb
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
 C:\Users\alvin\Source\Repos\alvinanulat\HACDOGS\HACDOGS\bin\Debug\Bunifu.UI.WinForms.Drawer.dll

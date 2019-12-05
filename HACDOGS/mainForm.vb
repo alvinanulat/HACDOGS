@@ -560,8 +560,8 @@ Public Class mainForm
                     cmd.Dispose()
                 Next
 
-                MessageBox.Show(q & "questions created!")
-
+                MessageBox.Show(q & " questions created!")
+                refreshQuestions()
             Catch ex As Exception
                 MessageBox.Show(ex.ToString)
             End Try
@@ -612,4 +612,5 @@ Public Class mainForm
             MsgBox("Select what Question will be edited.")
         End If
     End Sub
+
 End Class

@@ -84,13 +84,18 @@
     <ManifestKeyFile>HACDOGS_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>BG2.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Core, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
@@ -246,6 +251,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.manifest" />
     <None Include="My Project\app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -275,6 +281,7 @@
   <ItemGroup>
     <Content Include="BG2.ico" />
     <Content Include="coe.ico" />
+    <None Include="Resources\BG2.ico.bmp" />
     <None Include="Resources\x21.png" />
     <None Include="Resources\x2.png" />
     <None Include="Resources\full.png" />
