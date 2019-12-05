@@ -27,6 +27,11 @@ HACDOGS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:HACDOGS.My.Resources.Resources.BG2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
 <member name="P:HACDOGS.My.Resources.Resources.full">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
